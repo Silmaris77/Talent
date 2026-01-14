@@ -410,6 +410,8 @@ class CalibrationModule {
 
                 <div class="detailed-comparison">
                     <h5>Szczegółowe porównanie pytań:</h5>
+                    
+                    <h6 style="margin-top: 20px; margin-bottom: 10px; color: #1a1a1a; font-weight: 700;">🎯 Performance (wyniki bieżące):</h6>
                     <table class="comparison-table">
                         <thead>
                             <tr>
@@ -421,13 +423,16 @@ class CalibrationModule {
                         </thead>
                         <tbody>`;
 
-        const questionLabels = {
+        const performanceLabels = {
             'perf_q1': '1. Dostarczanie wyników',
             'perf_q2': '2. Jakość i dokładność',
             'perf_q3': '3. Niezawodność',
             'perf_q4': '4. Presja',
             'perf_q5': '5. Współpraca',
-            'perf_q6': '6. Komunikacja',
+            'perf_q6': '6. Komunikacja'
+        };
+
+        const potentialLabels = {
             'pot_q7': '7. Uczenie się',
             'pot_q8': '8. Ambicja',
             'pot_q9': '9. Myślenie strategiczne',
@@ -435,6 +440,8 @@ class CalibrationModule {
             'pot_q11': '11. Kompleksowość',
             'pot_q12': '12. Samodzielność'
         };
+
+        const questionLabels = {...performanceLabels, ...potentialLabels};
 
         // Calculate total deviation and accuracy score
         let totalDeviation = 0;
@@ -460,7 +467,8 @@ class CalibrationModule {
         const maxPossibleDeviation = 3 * totalQuestions;
         const accuracyScore = Math.max(0, (1 - totalAbsoluteDeviation / maxPossibleDeviation) * 100).toFixed(1);
 
-        Object.keys(questionLabels).forEach(qId => {
+        // Performance questions
+        Object.keys(performanceLabels).forEach(qId => {
             const userScore = userScores[qId];
             const benchScore = benchmark[qId];
             const diff = userScore - benchScore;
@@ -469,7 +477,40 @@ class CalibrationModule {
 
             html += `
                 <tr class="${diffClass}">
-                    <td>${questionLabels[qId]}</td>
+                    <td>${performanceLabels[qId]}</td>
+                    <td>${userScore}</td>
+                    <td>${benchScore}</td>
+                    <td class="diff">${diffText}</td>
+                </tr>`;
+        });
+
+        html += `
+                        </tbody>
+                    </table>
+                    
+                    <h6 style="margin-top: 30px; margin-bottom: 10px; color: #1a1a1a; font-weight: 700;">🚀 Potential (potencjał rozwojowy):</h6>
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Pytanie</th>
+                                <th>Twoja ocena</th>
+                                <th>Benchmark</th>
+                                <th>Różnica</th>
+                            </tr>
+                        </thead>
+                        <tbody>`;
+
+        // Potential questions
+        Object.keys(potentialLabels).forEach(qId => {
+            const userScore = userScores[qId];
+            const benchScore = benchmark[qId];
+            const diff = userScore - benchScore;
+            const diffClass = diff > 0 ? 'positive' : diff < 0 ? 'negative' : 'neutral';
+            const diffText = diff > 0 ? `+${diff}` : diff;
+
+            html += `
+                <tr class="${diffClass}">
+                    <td>${potentialLabels[qId]}</td>
                     <td>${userScore}</td>
                     <td>${benchScore}</td>
                     <td class="diff">${diffText}</td>

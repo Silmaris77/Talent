@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Wiedzy - Talent Detector</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .test-header {
+            background: #1a1a1a;
+            padding: 40px 30px;
+            text-align: center;
+            border-bottom: 8px solid #FFD100;
+        }
+
+        .test-header h1 {
+            font-size: 2.8rem;
+            color: #FFD100;
+            margin-bottom: 10px;
+            font-weight: 900;
+        }
+
+        .test-info {
+            background: #ffffff;
+            padding: 30px;
+            margin: 30px;
+            border: 1px solid #D0D0D0;
+            box-shadow: 8px 8px 0 #1a1a1a;
+        }
+
+        .test-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            background: #FFD100;
+            padding: 20px;
+            text-align: center;
+            border: 3px solid #1a1a1a;
+        }
+
+        .stat-item .stat-value {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #1a1a1a;
+            display: block;
+        }
+
+        .stat-item .stat-label {
+            font-size: 0.9rem;
+            color: #1a1a1a;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        .timer {
+            position: sticky;
+            top: 0;
+            background: #1a1a1a;
+            color: #FFD100;
+            padding: 15px 30px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 900;
+            z-index: 100;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .timer.warning {
+            background: #F57F17;
+            color: #ffffff;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .test-container {
+            margin: 30px;
+        }
+
+        .question-progress {
+            background: #ffffff;
+            padding: 15px 25px;
+            border: 3px solid #1a1a1a;
+            margin-bottom: 20px;
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+
+        .question-card {
+            background: #ffffff;
+            padding: 40px;
+            margin-bottom: 30px;
+            border: 1px solid #D0D0D0;
+            box-shadow: 8px 8px 0 #1a1a1a;
+        }
+
+        .question-category {
+            display: inline-block;
+            background: #FFD100;
+            color: #1a1a1a;
+            padding: 5px 15px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            border: 2px solid #1a1a1a;
+        }
+
+        .question-text {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .answers {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .answer-option {
+            background: #F5F5F5;
+            border: 3px solid #D0D0D0;
+            padding: 18px 25px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .answer-option:hover {
+            background: #FFD100;
+            border-color: #1a1a1a;
+            transform: translateX(5px);
+        }
+
+        .answer-option.selected {
+            background: #FFD100;
+            border-color: #1a1a1a;
+            border-width: 4px;
+            font-weight: 700;
+        }
+
+        .answer-option.correct {
+            background: #4CAF50;
+            border-color: #2E7D32;
+            color: #ffffff;
+        }
+
+        .answer-option.incorrect {
+            background: #F44336;
+            border-color: #C62828;
+            color: #ffffff;
+        }
+
+        .answer-option input[type="radio"] {
+            margin-right: 12px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .btn-nav {
+            flex: 1;
+            padding: 18px 35px;
+            font-size: 1.1rem;
+            font-weight: 800;
+            cursor: pointer;
+            border: 4px solid #1a1a1a;
+            background: #FFD100;
+            color: #1a1a1a;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-nav:hover {
+            background: #1a1a1a;
+            color: #FFD100;
+            transform: translateY(-2px);
+            box-shadow: 8px 8px 0 #FFD100;
+        }
+
+        .btn-nav:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .btn-submit {
+            background: #1a1a1a;
+            color: #FFD100;
+        }
+
+        .btn-submit:hover {
+            background: #FFD100;
+            color: #1a1a1a;
+        }
+
+        .results-container {
+            background: #ffffff;
+            padding: 50px;
+            margin: 30px;
+            border: 1px solid #D0D0D0;
+            box-shadow: 8px 8px 0 #1a1a1a;
+            text-align: center;
+        }
+
+        .score-display {
+            font-size: 5rem;
+            font-weight: 900;
+            color: #1a1a1a;
+            margin: 30px 0;
+        }
+
+        .score-display.pass {
+            color: #4CAF50;
+        }
+
+        .score-display.fail {
+            color: #F44336;
+        }
+
+        .result-message {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .question-review {
+            text-align: left;
+            margin-top: 40px;
+        }
+
+        .review-item {
+            background: #F5F5F5;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 6px solid #D0D0D0;
+        }
+
+        .review-item.correct {
+            border-left-color: #4CAF50;
+        }
+
+        .review-item.incorrect {
+            border-left-color: #F44336;
+        }
+
+        .explanation {
+            background: #FFF9C4;
+            padding: 15px;
+            margin-top: 15px;
+            border-left: 4px solid #F57F17;
+            font-style: italic;
+        }
+
+        .start-screen {
+            background: #ffffff;
+            padding: 50px;
+            margin: 30px;
+            border: 1px solid #D0D0D0;
+            box-shadow: 8px 8px 0 #1a1a1a;
+            text-align: center;
+        }
+
+        .start-screen h2 {
+            margin-bottom: 30px;
+        }
+
+        .start-screen ul {
+            text-align: left;
+            max-width: 600px;
+            margin: 30px auto;
+            line-height: 2;
+        }
+
+        .start-screen li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .btn-start {
+            padding: 20px 50px;
+            font-size: 1.3rem;
+            font-weight: 900;
+            background: #FFD100;
+            color: #1a1a1a;
+            border: 5px solid #1a1a1a;
+            cursor: pointer;
+            text-transform: uppercase;
+            margin-top: 30px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-start:hover {
+            background: #1a1a1a;
+            color: #FFD100;
+            transform: scale(1.05);
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="test-header">
+            <h1>📚 Test Wiedzy - Talent Management</h1>
+            <p class="subtitle">Sprawdź swoją wiedzę przed kalibracją praktyczną</p>
+        </header>
+
+        <!-- Start Screen -->
+        <div id="startScreen" class="start-screen">
+            <h2>🎯 Witaj w teście wiedzy!</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 20px;">
+                Zanim przejdziesz do praktycznej kalibracji case studies, sprawdź swoją wiedzę teoretyczną.
+            </p>
+
+            <div class="test-info">
+                <div class="test-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">10</span>
+                        <span class="stat-label">Pytań</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">10</span>
+                        <span class="stat-label">Minut</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">80%</span>
+                        <span class="stat-label">Próg zaliczenia</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto;">Test obejmuje:</h3>
+            <ul>
+                <li>✅ <strong>Definicje podstawowe:</strong> Performance vs Potential</li>
+                <li>✅ <strong>9-Box Grid:</strong> Kategorie talentów (Q1-Q9)</li>
+                <li>✅ <strong>Interpretacja zachowań:</strong> Praktyczne sytuacje</li>
+                <li>✅ <strong>Błędy w ocenie:</strong> Bias i pułapki</li>
+                <li>✅ <strong>Działania rozwojowe:</strong> Co robić z różnymi kategoriami</li>
+            </ul>
+
+            <button class="btn-start" onclick="startTest()">🚀 Rozpocznij test</button>
+        </div>
+
+        <!-- Timer -->
+        <div id="timer" class="timer hidden">
+            ⏱️ Pozostały czas: <span id="timeDisplay">10:00</span>
+        </div>
+
+        <!-- Test Container -->
+        <div id="testContainer" class="test-container hidden">
+            <div class="question-progress">
+                Pytanie <span id="currentQuestion">1</span> / <span id="totalQuestions">10</span>
+            </div>
+
+            <div id="questionCard" class="question-card">
+                <!-- Question will be injected here -->
+            </div>
+
+            <div class="nav-buttons">
+                <button class="btn-nav" id="prevBtn" onclick="navigateQuestion(-1)" disabled>
+                    ← Poprzednie
+                </button>
+                <button class="btn-nav" id="nextBtn" onclick="navigateQuestion(1)">
+                    Następne →
+                </button>
+                <button class="btn-nav btn-submit hidden" id="submitBtn" onclick="submitTest()">
+                    ✓ Zakończ test
+                </button>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="resultsScreen" class="results-container hidden">
+            <h2>🎉 Test zakończony!</h2>
+            
+            <div class="score-display" id="scoreDisplay">
+                <!-- Score will be injected here -->
+            </div>
+
+            <div class="result-message" id="resultMessage">
+                <!-- Message will be injected here -->
+            </div>
+
+            <div class="test-stats" style="max-width: 800px; margin: 30px auto;">
+                <div class="stat-item">
+                    <span class="stat-value" id="correctAnswers">0</span>
+                    <span class="stat-label">Poprawne odpowiedzi</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="timeSpent">0:00</span>
+                    <span class="stat-label">Wykorzystany czas</span>
+                </div>
+            </div>
+
+            <div class="question-review" id="questionReview">
+                <!-- Review will be injected here -->
+            </div>
+
+            <div class="nav-buttons">
+                <button class="btn-nav" onclick="retakeTest()">
+                    🔄 Powtórz test
+                </button>
+                <button class="btn-nav" onclick="window.location.href='index.html'">
+                    ← Powrót do menu
+                </button>
+                <button class="btn-nav btn-submit" onclick="goToCalibration()">
+                    🎯 Przejdź do kalibracji →
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="test-logic-simple.js"></script>
+</body>
+</html>

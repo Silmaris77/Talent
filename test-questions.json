@@ -1,0 +1,131 @@
+{
+  "testInfo": {
+    "title": "Test Wiedzy - Talent Management",
+    "description": "Sprawdź swoją wiedzę na temat oceny talentów, 9-box grid i kategorii pracowników",
+    "timeLimit": 10,
+    "passingScore": 80,
+    "totalQuestions": 10
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "category": "Definicje podstawowe",
+      "text": "Co to jest 'Performance' w kontekście oceny talentów?",
+      "answers": [
+        { "text": "Obecne wyniki i efektywność pracownika w realizacji celów stanowiska", "correct": true },
+        { "text": "Zdolność pracownika do rozwoju i awansu w przyszłości", "correct": false },
+        { "text": "Motywacja i zaangażowanie pracownika w działania firmy", "correct": false },
+        { "text": "Staż pracy i doświadczenie zawodowe pracownika", "correct": false }
+      ],
+      "explanation": "Performance to bieżące wyniki – jak skutecznie pracownik realizuje cele swojego stanowiska w obecnej roli."
+    },
+    {
+      "id": "q2",
+      "category": "Definicje podstawowe",
+      "text": "Co to jest 'Potential' w kontekście oceny talentów?",
+      "answers": [
+        { "text": "Zdolność do rozwoju i przejmowania większej odpowiedzialności w przyszłości", "correct": true },
+        { "text": "Obecna efektywność w realizacji zadań", "correct": false },
+        { "text": "Liczba ukończonych szkoleń rozwojowych", "correct": false },
+        { "text": "Poziom zadowolenia z obecnej roli", "correct": false }
+      ],
+      "explanation": "Potential to zdolność i gotowość do wzięcia większej odpowiedzialności, rozwoju w bardziej złożone role."
+    },
+    {
+      "id": "q3",
+      "category": "9-Box Grid",
+      "text": "Pracownik z wysokim Performance i wysokim Potential to:",
+      "answers": [
+        { "text": "Gwiazda (Q9) - największy priorytet rozwojowy firmy", "correct": true },
+        { "text": "Kluczowy Gracz (Q6) - ekspert z doświadczeniem", "correct": false },
+        { "text": "Wschodzący Talent (Q8) - wymaga jeszcze doświadczenia", "correct": false },
+        { "text": "Stabilny Wykonawca (Q5) - solidny performer", "correct": false }
+      ],
+      "explanation": "Q9 (Gwiazda) to pracownicy w prawym górnym rogu 9-box - wysokie Performance + wysokie Potential. To największy priorytet rozwojowy."
+    },
+    {
+      "id": "q4",
+      "category": "9-Box Grid",
+      "text": "Pracownik z wysokim Performance, ale niskim Potential to:",
+      "answers": [
+        { "text": "Kluczowy Gracz (Q6) - cenny ekspert w swojej dziedzinie", "correct": true },
+        { "text": "Gwiazda (Q9) - kandydat do szybkiego awansu", "correct": false },
+        { "text": "Stabilny Wykonawca (Q5) - przeciętny wykonawca", "correct": false },
+        { "text": "Niewydajny (Q1) - wymaga działań naprawczych", "correct": false }
+      ],
+      "explanation": "Q6 (Kluczowy Gracz) to wartościowi eksperci z wysokim Performance ale niskim Potential - świetnie wykonują pracę, ale nie dążą do większej odpowiedzialności."
+    },
+    {
+      "id": "q5",
+      "category": "9-Box Grid",
+      "text": "Pracownik z niskim Performance, ale wysokim Potential to:",
+      "answers": [
+        { "text": "Zagadka (Q7) - wymaga analizy przyczyn słabych wyników", "correct": true },
+        { "text": "Gwiazda (Q9) - priorytet rozwojowy", "correct": false },
+        { "text": "Stabilny Wykonawca (Q5) - solidny wykonawca", "correct": false },
+        { "text": "Niewydajny (Q1) - kandydat do zwolnienia", "correct": false }
+      ],
+      "explanation": "Q7 (Zagadka/Enigma) to sytuacja, gdzie widzimy potencjał, ale wyniki są słabe. Trzeba zrozumieć dlaczego - dopasowanie roli, onboarding, przeszkody."
+    },
+    {
+      "id": "q6",
+      "category": "Interpretacja zachowań",
+      "text": "Pracownik realizuje 100% swoich celów, ale nigdy nie wychodzi z inicjatywą poza swój zakres. Gdzie go umieścisz?",
+      "answers": [
+        { "text": "Wysokie Performance, niskie Potential (Q6 - Kluczowy Gracz)", "correct": true },
+        { "text": "Wysokie Performance, wysokie Potential (Q9 - Gwiazda)", "correct": false },
+        { "text": "Średnie Performance, średnie Potential (Q5 - Stabilny Wykonawca)", "correct": false },
+        { "text": "Niskie Performance, wysokie Potential (Q7 - Zagadka)", "correct": false }
+      ],
+      "explanation": "Brak inicjatywy i dążenia do rozszerzania zakresu to sygnał niskiego potential. Performance jest wysokie, ale brak ambicji rozwojowej - to Q6 Kluczowy Gracz."
+    },
+    {
+      "id": "q7",
+      "category": "Interpretacja zachowań",
+      "text": "Nowy pracownik pokazuje szybkie tempo uczenia się, proponuje usprawnienia i pomaga innym. Wyniki są średnie (60% celów), bo jest dopiero 3 miesiące w firmie. Gdzie go umieścisz?",
+      "answers": [
+        { "text": "Średnie Performance, wysokie Potential (Q8 - Wschodzący Talent)", "correct": true },
+        { "text": "Niskie Performance, wysokie Potential (Q7 - Zagadka)", "correct": false },
+        { "text": "Wysokie Performance, wysokie Potential (Q9 - Gwiazda)", "correct": false },
+        { "text": "Średnie Performance, średnie Potential (Q5 - Stabilny Wykonawca)", "correct": false }
+      ],
+      "explanation": "Krótki staż + wysokie sygnały potential (uczenie się, proaktywność) + rosnące wyniki = Q8 Wschodzący Talent. Za wcześnie na Q9 Gwiazdę, ale widać potencjał."
+    },
+    {
+      "id": "q8",
+      "category": "Wskaźniki Potential",
+      "text": "Który z poniższych jest NAJSILNIEJSZYM wskaźnikiem wysokiego Potential?",
+      "answers": [
+        { "text": "Dobrowolnie przejmuje trudniejsze zadania i odpowiedzialność poza swoją rolą", "correct": true },
+        { "text": "Ma długi staż pracy w firmie (5+ lat)", "correct": false },
+        { "text": "Jest lubiana/y przez zespół", "correct": false },
+        { "text": "Ukończył wiele szkoleń zawodowych", "correct": false }
+      ],
+      "explanation": "Najlepszy wskaźnik potential to ZACHOWANIE - dobrowolne poszerzanie zakresu i przejmowanie odpowiedzialności. To pokazuje ambicję i gotowość."
+    },
+    {
+      "id": "q9",
+      "category": "Błędy w ocenie",
+      "text": "Menedżer ocenia wszystkich swoich pracowników jako 'powyżej oczekiwań' bo 'nie chce ich zdemotywować'. Co to jest?",
+      "answers": [
+        { "text": "Leniency bias - tendencja do zawyżania ocen", "correct": true },
+        { "text": "Halo effect - ocena na podstawie jednej cechy", "correct": false },
+        { "text": "Recency bias - skupienie na ostatnich wydarzeniach", "correct": false },
+        { "text": "Poprawne podejście - motywacja jest najważniejsza", "correct": false }
+      ],
+      "explanation": "Leniency bias to tendencja do łagodności i zawyżania ocen. Niszczy to wiarygodność systemu ocen i uniemożliwia rozwój."
+    },
+    {
+      "id": "q10",
+      "category": "Działania rozwojowe",
+      "text": "Co powinieneś zrobić z pracownikiem z wysokim Performance, ale niskim Potential (Q6 - Kluczowy Gracz)?",
+      "answers": [
+        { "text": "Utrzymać w roli eksperta, doceniać ekspertyzę, nie forsować awansu menedżerskiego", "correct": true },
+        { "text": "Natychmiast awansować na stanowisko menedżerskie jako nagrodę za wyniki", "correct": false },
+        { "text": "Umieścić na liście do redukcji etatów, bo brak potential", "correct": false },
+        { "text": "Zmusić do wzięcia większej odpowiedzialności aby rozwinąć potential", "correct": false }
+      ],
+      "explanation": "Q6 (Kluczowy Gracz) to cenne zasoby - eksperci techniczni, specjaliści. Należy ich doceniać w ich roli, a nie forsować ścieżki menedżerskiej."
+    }
+  ]
+}

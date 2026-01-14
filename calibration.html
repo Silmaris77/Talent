@@ -3,258 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Talent Detector - Narzędzia Oceny Talentów</title>
+    <title>Talent Detector - Moduł Kalibracji</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .landing-hero {
-            text-align: center;
-            padding: 60px 40px;
-        }
-
-        .landing-hero h2 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            border: none;
-            padding: 0;
-        }
-
-        .landing-hero .intro-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            max-width: 800px;
-            margin: 0 auto 40px;
-            color: #666;
-        }
-
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .tool-card {
-            background: #ffffff;
-            border: 1px solid #D0D0D0;
-            box-shadow: 8px 8px 0 #1a1a1a;
-            padding: 40px;
-            transition: all 0.3s ease;
-        }
-
-        .tool-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 12px 12px 0 #1a1a1a;
-        }
-
-        .tool-icon {
-            font-size: 4rem;
-            margin-bottom: 20px;
-        }
-
-        .tool-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-            color: #1a1a1a;
-        }
-
-        .tool-card .tool-description {
-            font-size: 1rem;
-            line-height: 1.7;
-            color: #666;
-            margin-bottom: 25px;
-        }
-
-        .tool-features {
-            text-align: left;
-            margin-bottom: 30px;
-        }
-
-        .tool-features li {
-            margin-bottom: 10px;
-            font-size: 0.95rem;
-            color: #1a1a1a;
-        }
-
-        .tool-meta {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 30px;
-            padding: 20px;
-            background: #F5F5F5;
-            border: 2px solid #D0D0D0;
-        }
-
-        .meta-item {
-            text-align: center;
-        }
-
-        .meta-value {
-            display: block;
-            font-size: 1.5rem;
-            font-weight: 900;
-            color: #1a1a1a;
-        }
-
-        .meta-label {
-            font-size: 0.85rem;
-            color: #666;
-            margin-top: 5px;
-        }
-
-        .btn-tool {
-            display: inline-block;
-            padding: 18px 40px;
-            font-size: 1.1rem;
-            font-weight: 800;
-            background: #FFD100;
-            color: #1a1a1a;
-            text-decoration: none;
-            border: 4px solid #1a1a1a;
-            text-transform: uppercase;
-            transition: all 0.2s ease;
-            width: 100%;
-            text-align: center;
-        }
-
-        .btn-tool:hover {
-            background: #1a1a1a;
-            color: #FFD100;
-            transform: translateY(-2px);
-        }
-
-        .tool-card.recommended {
-            border: 4px solid #FFD100;
-            position: relative;
-        }
-
-        .recommended-badge {
-            position: absolute;
-            top: -15px;
-            right: 20px;
-            background: #FFD100;
-            color: #1a1a1a;
-            padding: 8px 20px;
-            font-weight: 900;
-            font-size: 0.85rem;
-            border: 3px solid #1a1a1a;
-        }
-
-        @media (max-width: 900px) {
-            .tools-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>🎯 Talent Detector</h1>
-            <p class="subtitle">Profesjonalne narzędzia do oceny i rozwoju talentów</p>
+            <h1>🎓 Talent Detector - Kalibracja</h1>
+            <p class="subtitle">Ćwicz kalibrację ocen na przykładowych case studies</p>
         </header>
 
         <div class="main-content">
-            <section class="landing-hero">
-                <h2>Wybierz narzędzie przygotowujące do oceny talentów</h2>
-                <p class="intro-text">
-                    System Talent Detector oferuje dwa komplementarne narzędzia, które pomogą Ci rozwinąć umiejętności 
-                    w ocenie pracowników pod kątem performance i potential. Możesz zacząć od dowolnego z nich lub 
-                    skorzystać z obu dla pełnego przygotowania.
-                </p>
-
-                <div class="tools-grid">
-                    <!-- Test Wiedzy -->
-                    <div class="tool-card recommended">
-                        <span class="recommended-badge">⭐ Zacznij tutaj</span>
-                        <div class="tool-icon">📚</div>
-                        <h3>Test Wiedzy</h3>
-                        <p class="tool-description">
-                            Sprawdź swoją wiedzę teoretyczną na temat oceny talentów, 9-box grid 
-                            i kategorii pracowników. Idealny punkt startowy przed praktyczną kalibracją.
-                        </p>
-
-                        <div class="tool-meta">
-                            <div class="meta-item">
-                                <span class="meta-value">10</span>
-                                <span class="meta-label">Pytań</span>
-                            </div>
-                            <div class="meta-item">
-                                <span class="meta-value">10 min</span>
-                                <span class="meta-label">Czas</span>
-                            </div>
-                            <div class="meta-item">
-                                <span class="meta-value">80%</span>
-                                <span class="meta-label">Do zaliczenia</span>
-                            </div>
-                        </div>
-
-                        <div class="tool-features">
-                            <strong>Co sprawdzisz:</strong>
-                            <ul>
-                                <li>✅ Definicje Performance vs Potential</li>
-                                <li>✅ Kategorie 9-Box Grid (Q1-Q9)</li>
-                                <li>✅ Interpretację zachowań pracowników</li>
-                                <li>✅ Błędy poznawcze w ocenie (biasy)</li>
-                                <li>✅ Strategie rozwoju dla różnych kategorii</li>
-                            </ul>
-                        </div>
-
-                        <a href="test.html" class="btn-tool">🚀 Rozpocznij test</a>
-                    </div>
-
-                    <!-- Kalibracja Case Studies -->
-                    <div class="tool-card">
-                        <div class="tool-icon">🎓</div>
-                        <h3>Kalibracja Praktyczna</h3>
-                        <p class="tool-description">
-                            Przećwicz ocenę pracowników na realnych case studies. Oceń 5 profili i porównaj 
-                            swoje wyniki z benchmarkiem eksperckim, aby skalibrować swoje oceny.
-                        </p>
-
-                        <div class="tool-meta">
-                            <div class="meta-item">
-                                <span class="meta-value">5</span>
-                                <span class="meta-label">Case studies</span>
-                            </div>
-                            <div class="meta-item">
-                                <span class="meta-value">30 min</span>
-                                <span class="meta-label">Czas</span>
-                            </div>
-                            <div class="meta-item">
-                                <span class="meta-value">12</span>
-                                <span class="meta-label">Wymiarów oceny</span>
-                            </div>
-                        </div>
-
-                        <div class="tool-features">
-                            <strong>Co przećwiczysz:</strong>
-                            <ul>
-                                <li>✅ Ocenę Performance (6 wymiarów)</li>
-                                <li>✅ Ocenę Potential (6 wymiarów)</li>
-                                <li>✅ Kategoryzację pracowników w 9-box</li>
-                                <li>✅ Interpretację niuansów i GAP-ów</li>
-                                <li>✅ Spójność ocen między case'ami</li>
-                            </ul>
-                        </div>
-
-                        <a href="calibration.html" class="btn-tool">🎯 Rozpocznij kalibrację</a>
-                    </div>
+            <!-- Sekcja kalibracji -->
+            <section id="kalibracja" class="calibration-intro">
+                <h2>🎓 Ćwicz kalibrację ocen</h2>
+                <p class="subtitle">Oceń przykładowe case studies i porównaj swoje wyniki z ocenami eksperckimi</p>
+                
+                <div class="calibration-purpose">
+                    <h3>Cel ćwiczenia:</h3>
+                    <p>Kalibracja zapewnia spójność ocen między różnymi oceniającymi. Poniżej znajdziesz 5 profili pracowników. 
+                    Oceń każdy z nich używając tych samych 12 pytań, a następnie porównaj swoje oceny z benchmarkiem eksperckim.</p>
                 </div>
 
-                <div style="margin-top: 60px; padding: 40px; background: #FFF9C4; border-left: 6px solid #F57F17;">
-                    <h3 style="margin-bottom: 15px;">💡 Rekomendowana ścieżka nauki:</h3>
-                    <ol style="line-height: 2; font-size: 1.05rem;">
-                        <li><strong>Krok 1:</strong> Zrób Test Wiedzy aby upewnić się, że rozumiesz podstawowe koncepty</li>
-                        <li><strong>Krok 2:</strong> Przejdź do Kalibracji Praktycznej aby zastosować wiedzę w praktyce</li>
-                        <li><strong>Krok 3:</strong> Jeśli wynik kalibracji jest niski, wróć do testu i powtórz obie ścieżki</li>
-                    </ol>
+                <div style="margin-top: 30px; text-align: center;">
+                    <a href="index.html" style="display: inline-block; padding: 15px 30px; background: #1a1a1a; color: #FFD100; text-decoration: none; font-weight: 800; border: 3px solid #FFD100; font-size: 1rem;">
+                        ← Powrót do menu głównego
+                    </a>
                 </div>
             </section>
-        </div>
-    </div>
-</body>
-</html>
 
+            <!-- Case Study 1: Joanna (High Potential) -->
+            <section class="case-study" id="case1">
                 <div class="case-header">
                     <h3>📋 Case Study #1: Joanna - Regional Sales Manager</h3>
                 </div>
