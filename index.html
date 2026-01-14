@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talent Detector - Moduł Kalibracji</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 Talent Detector - Kalibracja</h1>
+            <p class="subtitle">Ćwicz kalibrację ocen na przykładowych case studies</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Sekcja kalibracji -->
+            <section id="kalibracja" class="calibration-intro">
+                <h2>🎓 Ćwicz kalibrację ocen</h2>
+                <p class="subtitle">Oceń przykładowe case studies i porównaj swoje wyniki z ocenami eksperckimi</p>
+                
+                <div class="calibration-purpose">
+                    <h3>Cel ćwiczenia:</h3>
+                    <p>Kalibracja zapewnia spójność ocen między różnymi oceniającymi. Poniżej znajdziesz 5 profili pracowników. 
+                    Oceń każdy z nich używając tych samych 12 pytań, a następnie porównaj swoje oceny z benchmarkiem eksperckim.</p>
+                </div>
+            </section>
+
+            <!-- Case Study 1: Joanna (High Potential) -->
+            <section class="case-study" id="case1">
+                <div class="case-header">
+                    <h3>📋 Case Study #1: Joanna - Regional Sales Manager</h3>
+                </div>
+                
+                <div class="case-layout">
+                    <div class="case-description">
+                        <div class="case-context">
+                            <h4>Kontekst:</h4>
+                            <p>Joanna została oceniona na „przekracza oczekiwania" w ostatnim roku i awansowała 2 lata temu. Ma 5 lat doświadczenia w firmie.</p>
+                        </div>
+
+                        <div class="case-details-grid">
+                            <div class="case-section">
+                                <h4>🎯 Performance:</h4>
+                            
+                            <div class="case-item">
+                                <strong>1. Dostarczanie wyników:</strong>
+                                <ul>
+                                    <li>Osiągnęła 108% celu sprzedażowego w Q4 2024</li>
+                                    <li>Regularnie podejmuje dodatkowe obowiązki poza swoim scope</li>
+                                    <li>Zrealizowała wszystkie kluczowe projekty w terminie w ostatnim roku</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>2. Jakość i dokładność:</strong>
+                                <ul>
+                                    <li>Jej raporty czasami zawierają drobne błędy wymagające korekt</li>
+                                    <li>Klienci chwalą ją za responsywność, ale zdarzają się pomyłki w szczegółach kontraktowych</li>
+                                    <li><span class="gap">GAP:</span> Powinna poświęcić więcej czasu na pogłębienie wiedzy produktowej</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>3. Niezawodność i konsekwencja:</strong>
+                                <ul>
+                                    <li>W rutynowych sytuacjach działa bardzo niezawodnie</li>
+                                    <li><span class="gap">GAP:</span> W niejednoznacznych przypadkach jej decyzje brakują spójności - raz deleguje, raz robi sama</li>
+                                    <li>Nie zawsze stosuje te same kryteria przy ocenie podobnych sytuacji</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>4. Radzenie sobie z presją:</strong>
+                                <ul>
+                                    <li>Doskonale radzi sobie z przyjmowaniem nowych, pilnych zadań</li>
+                                    <li>Zachowuje spokój w sytuacjach kryzysowych z klientami</li>
+                                    <li>Sprawnie adaptuje się do zmian priorytetów</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>5. Współpraca i wpływ:</strong>
+                                <ul>
+                                    <li>Buduje relacje między działami (sales-marketing-logistics)</li>
+                                    <li><span class="gap">GAP:</span> Relacje są szerokie ale powierzchowne - powinna inwestować w głębsze, trwałe partnerstwa</li>
+                                    <li>Dobrze współpracuje, ale rzadko inicjuje systemowe zmiany</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>6. Komunikacja:</strong>
+                                <ul>
+                                    <li>Aktywnie nawiązuje kontakty z nowymi klientami i projektami</li>
+                                    <li>Skutecznie prezentuje pomysły na spotkaniach zespołowych</li>
+                                    <li>Jasno komunikuje oczekiwania, choć czasem brakuje follow-up</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="case-section">
+                            <h4>🚀 Potential (potencjał do większych ról):</h4>
+                            
+                            <div class="case-item">
+                                <strong>7. Zdolność uczenia się:</strong>
+                                <ul>
+                                    <li>Bardzo elastyczna - szybko przyswaja nowe narzędzia i procesy</li>
+                                    <li>Świetnie adaptuje się do zmian w strategii firmy</li>
+                                    <li>Chętnie korzysta z feedbacku i go wdraża</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>8. Ambicja i motywacja:</strong>
+                                <ul>
+                                    <li>Wyraża silną motywację do rozwoju kariery</li>
+                                    <li>Aktywnie pyta o możliwości awansu</li>
+                                    <li>Uczestniczy w dodatkowych projektach rozwojowych</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>9. Myślenie strategiczne i innowacyjność:</strong>
+                                <ul>
+                                    <li><span class="gap">GAP:</span> Nie pokazała jeszcze pełnych zdolności strategicznych</li>
+                                    <li>Proponuje usprawnienia taktyczne, ale brakuje wizji long-term</li>
+                                    <li>Mogłaby tworzyć bardziej innowacyjne rozwiązania gdyby zainwestowała czas w głębszą analizę</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>10. Potencjał przywódczy:</strong>
+                                <ul>
+                                    <li>Menedżer widzi w niej duży potencjał do roli menedżerskiej</li>
+                                    <li>Inspiruje zespół swoim zaangażowaniem</li>
+                                    <li>Jeszcze nie miała okazji zarządzać zespołem bezpośrednio</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>11. Kompleksowość:</strong>
+                                <ul>
+                                    <li>Radzi sobie z wieloma projektami jednocześnie</li>
+                                    <li><span class="gap">GAP:</span> Powinna pogłębić wiedzę merytoryczną zamiast ciągle dodawać nowe tematy</li>
+                                    <li>Czasem brakuje jej głębi w bardziej złożonych analizach biznesowych</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>12. Samodzielność i inicjatywa:</strong>
+                                <ul>
+                                    <li>Bardzo proaktywna - często wychodzi z inicjatywami</li>
+                                    <li>Nie czeka na polecenia, sama identyfikuje obszary do poprawy</li>
+                                    <li>Sprawnie organizuje swoją pracę bez nadzoru</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="case-summary">
+                            <strong>Wpływ na organizację:</strong> Pozytywny i rosnący, choć bardziej szeroki niż głęboki.
+                        </div>
+                        </div>
+                    </div>
+                    
+                    <div class="case-form-container">
+                        <div class="case-assessment" id="assessment-case1">
+                            <!-- Assessment form will be injected here by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Case Study 2: Robert (Enigma) -->
+            <section class="case-study" id="case2">
+                <div class="case-header">
+                    <h3>📋 Case Study #2: Robert - Business Development Specialist</h3>
+                </div>
+                
+                <div class="case-layout">
+                    <div class="case-description">
+                        <div class="case-context">
+                            <h4>Kontekst:</h4>
+                            <p>Robert, wysoko oceniany pracownik w ubiegłym roku, kilka miesięcy temu został awansowany na nową rolę w dziale spoza swojej dotychczasowej specjalizacji. Pomimo szybkiego awansu i wysokich wyników w poprzedniej roli, ostatnio wykazuje niespójność w pracy i ma trudności z osiągnięciem oczekiwanych rezultatów na nowym stanowisku. Choć rozumie kluczowe kompetencje, nie udało mu się jeszcze wytworzyć wartości w nowej roli.</p>
+                        </div>
+
+                        <div class="case-details-grid">
+                            <div class="case-section">
+                                <h4>🎯 Performance:</h4>
+                            
+                            <div class="case-item">
+                                <strong>1. Dostarczanie wyników:</strong>
+                                <ul>
+                                    <li><span class="gap">GAP:</span> Realizuje tylko 65-75% swoich celów kwartalnych w nowej roli</li>
+                                    <li>W poprzedniej roli regularnie przekraczał cele (120%+)</li>
+                                    <li>Projekty często tracą momentum - brakuje dowożenia</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>2. Jakość i dokładność:</strong>
+                                <ul>
+                                    <li>Jakość pracy jest nierówna - czasem świetna, czasem wymaga poprawek</li>
+                                    <li>Analizy biznesowe powierzchowne, brakuje głębi</li>
+                                    <li>Pomija istotne szczegóły w raportowaniu do managementu</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>3. Niezawodność i konsekwencja:</strong>
+                                <ul>
+                                    <li><span class="gap">GAP:</span> Trudno przewidzieć jego poziom zaangażowania dzień do dnia</li>
+                                    <li>Czasami bardzo zaangażowany, innym razem zdystansowany</li>
+                                    <li>Nie wywiązuje się konsekwentnie z zobowiązań wobec stakeholderów</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>4. Radzenie sobie z presją:</strong>
+                                <ul>
+                                    <li>Frustruje się, gdy napotyka trudności w nowej roli</li>
+                                    <li>W poprzedniej roli doskonale radził sobie ze stresem</li>
+                                    <li><span class="gap">GAP:</span> Obecnie presja obniża jego motywację i skuteczność</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>5. Współpraca i wpływ:</strong>
+                                <ul>
+                                    <li>Współpraca grzecznościowa, ale bez realnego wpływu</li>
+                                    <li><span class="gap">GAP:</span> Wycofał się z aktywnych relacji międzydziałowych</li>
+                                    <li>Zespół zauważa jego malejące zaangażowanie</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>6. Komunikacja:</strong>
+                                <ul>
+                                    <li>Komunikuje się reaktywnie - odpowiada gdy pytany</li>
+                                    <li><span class="gap">GAP:</span> Brakuje proaktywnego dzielenia się informacją</li>
+                                    <li>Unika trudnych rozmów z menedżerem o swoich wyzwaniach</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="case-section">
+                            <h4>🚀 Potential (potencjał do większych ról):</h4>
+                            
+                            <div class="case-item">
+                                <strong>7. Zdolność uczenia się:</strong>
+                                <ul>
+                                    <li>Inteligentny - w poprzedniej roli bardzo szybko się uczył</li>
+                                    <li>W nowej roli wydaje się przytłoczony ilością nowej wiedzy</li>
+                                    <li>Ma potencjał, ale obecnie nie przekłada go na działanie</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>8. Ambicja i motywacja:</strong>
+                                <ul>
+                                    <li><span class="gap">GAP:</span> Brak zainteresowania obecną rolą - wyraźnie spadła motywacja</li>
+                                    <li>Wcześniej bardzo ambitny (dlatego awansował szybko)</li>
+                                    <li>Obecnie nie wykazuje chęci rozwoju w tym obszarze</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>9. Myślenie strategiczne i innowacyjność:</strong>
+                                <ul>
+                                    <li>W poprzedniej roli pokazywał dobre zdolności analityczne</li>
+                                    <li>Rozumie szerszy kontekst biznesowy</li>
+                                    <li>Może myśleć strategicznie, gdy jest zaangażowany</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>10. Potencjał przywódczy:</strong>
+                                <ul>
+                                    <li>Wcześniej lider nieformalny w zespole</li>
+                                    <li>Potrafi inspirować innych, gdy jest zmotywowany</li>
+                                    <li>Obecnie jednak izoluje się zamiast budować wpływ</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>11. Kompleksowość:</strong>
+                                <ul>
+                                    <li>Udowodnił zdolność do złożonych projektów w poprzedniej roli</li>
+                                    <li>Potrafi łączyć różne perspektywy biznesowe</li>
+                                    <li><span class="gap">GAP:</span> Obecnie unika złożoności zamiast ją rozwiązywać</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>12. Samodzielność i inicjatywa:</strong>
+                                <ul>
+                                    <li><span class="gap">GAP:</span> Minimalną odpowiedzialność za własny rozwój w nowej roli</li>
+                                    <li>Czeka na wsparcie zamiast szukać rozwiązań</li>
+                                    <li>Wcześniej bardzo proaktywny - potencjał wciąż istnieje</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="case-summary">
+                            <strong>Wpływ na organizację:</strong> Wysoki potencjał niewykorzystany - możliwe błędne dopasowanie roli lub brak onboardingu.
+                        </div>
+                        </div>
+                    </div>
+                    
+                    <div class="case-form-container">
+                        <div class="case-assessment" id="assessment-case2">
+                            <!-- Assessment form will be injected here by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Case Study 3: Monika (Ekspert) -->
+            <section class="case-study" id="case3">
+                <div class="case-header">
+                    <h3>📋 Case Study #3: Monika - Senior Technical Specialist</h3>
+                </div>
+                
+                <div class="case-layout">
+                    <div class="case-description">
+                        <div class="case-context">
+                            <h4>Kontekst:</h4>
+                            <p>Monika działa w swojej branży od ponad 20 lat i jest powszechnie uznawana przez współpracowników za eksperta w swojej dziedzinie. Regularnie przekracza oczekiwania w zakresie osiągania celów biznesowych. Jej ogromne doświadczenie pozwala dostarczać skuteczne rozwiązania biznesowe za pomocą sprawdzonych metod. Pomimo imponujących osiągnięć, nie wykazuje większego zainteresowania rozszerzaniem zakresu obowiązków ani podejmowaniem nowych wyzwań poza obecną specjalizacją.</p>
+                        </div>
+
+                        <div class="case-details-grid">
+                            <div class="case-section">
+                                <h4>🎯 Performance:</h4>
+                            
+                            <div class="case-item">
+                                <strong>1. Dostarczanie wyników:</strong>
+                                <ul>
+                                    <li>Regularnie osiąga 110-115% celów w swoim obszarze</li>
+                                    <li>Wszystkie projekty techniczne dostarczane terminowo i zgodnie z wymaganiami</li>
+                                    <li>Najwyższe wyniki w zespole od wielu lat</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>2. Jakość i dokładność:</strong>
+                                <ul>
+                                    <li>Wyjątkowo wysoka jakość - standard dla innych</li>
+                                    <li>Błędy praktycznie nie występują w jej pracy</li>
+                                    <li>Inni korzystają z jej ekspertyzy do weryfikacji rozwiązań</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>3. Niezawodność i konsekwencja:</strong>
+                                <ul>
+                                    <li>Absolutna niezawodność - można na niej polegać w 100%</li>
+                                    <li>20 lat konsekwentnie wysokich wyników</li>
+                                    <li>Gwarant stabilności w zespole i projektach</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>4. Radzenie sobie z presją:</strong>
+                                <ul>
+                                    <li>Doskonale radzi sobie w sytuacjach kryzysowych w swojej domenie</li>
+                                    <li>Spokojnie rozwiązuje nawet najbardziej skomplikowane problemy techniczne</li>
+                                    <li>Preferuje jednak stabilne, przewidywalne warunki pracy</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>5. Współpraca i wpływ:</strong>
+                                <ul>
+                                    <li>Buduje i utrzymuje silne relacje biznesowe w swojej specjalizacji</li>
+                                    <li>Dzieli się wiedzą jako mentor techniczny</li>
+                                    <li>Ograniczona współpraca poza swoim obszarem technicznym</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>6. Komunikacja:</strong>
+                                <ul>
+                                    <li>Bardzo jasna i precyzyjna komunikacja w tematach technicznych</li>
+                                    <li>Świetnie przekazuje wiedzę specjalistyczną</li>
+                                    <li>Aktywnie dzieli się najlepszymi praktykami w zespole</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="case-section">
+                            <h4>🚀 Potential:</h4>
+                            
+                            <div class="case-item">
+                                <strong>7. Zdolność uczenia się:</strong>
+                                <ul>
+                                    <li>W swojej domenie uczy się szybko - głęboka ekspertyza</li>
+                                    <li><span class="gap">OGRANICZENIE:</span> Opiera się nowym technologiom spoza swojej specjalizacji</li>
+                                    <li>Preferuje wykorzystywanie sprawdzonych metod niż eksperymentowanie</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>8. Ambicja i motywacja:</strong>
+                                <ul>
+                                    <li><span class="gap">OGRANICZENIE:</span> Nie wykazuje zainteresowania rozszerzaniem zakresu obowiązków</li>
+                                    <li>Zadowolona z obecnej roli - unika nowych wyzwań</li>
+                                    <li>Odrzuca propozycje awansu na role kierownicze</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>9. Myślenie strategiczne i innowacyjność:</strong>
+                                <ul>
+                                    <li>Główny nacisk na utrzymanie bieżącej działalności</li>
+                                    <li><span class="gap">OGRANICZENIE:</span> Nie poszukuje innowacji ani szerszych inicjatyw strategicznych</li>
+                                    <li>Świetnie realizuje to co jest - nie proponuje "co może być"</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>10. Potencjał przywódczy:</strong>
+                                <ul>
+                                    <li>Nie wykazuje zainteresowania rolami przywódczymi</li>
+                                    <li><span class="gap">OGRANICZENIE:</span> Unika odpowiedzialności za zespół lub szersze projekty</li>
+                                    <li>Woli być ekspertem niż liderem</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>11. Kompleksowość:</strong>
+                                <ul>
+                                    <li>Głęboka ekspertyza w wąskim obszarze technicznym</li>
+                                    <li><span class="gap">OGRANICZENIE:</span> Brak chęci rozwoju w nowych obszarach czy rolach</li>
+                                    <li>Preferuje głębię nad szerokością kompetencji</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-item">
+                                <strong>12. Samodzielność i inicjatywa:</strong>
+                                <ul>
+                                    <li>Bardzo samodzielna w swoim zakresie obowiązków</li>
+                                    <li><span class="gap">OGRANICZENIE:</span> Preferuje stabilność - unika nowych możliwości rozwoju</li>
+                                    <li>Nie wychodzi z inicjatywami poza swój ustalony scope</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="case-summary">
+                            <strong>Wpływ na organizację:</strong> Wysoko ceniony i niezawodny ekspert, ale ograniczony potencjał do ról o szerszym zakresie odpowiedzialności.
+                        </div>
+                        </div>
+                    </div>
+                    
+                    <div class="case-form-container">
+                        <div class="case-assessment" id="assessment-case3">
+                            <!-- Assessment form will be injected here by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Case Study 4: Tomasz -->
+            <section class="case-study" id="case4">
+                <div class="case-header">
+                    <h3>📋 Case Study #4: Tomasz - Senior Business Analyst</h3>
+                </div>
+                
+                <div class="case-layout">
+                    <div class="case-description">
+                        <div class="case-context">
+                            <h4>Kontekst:</h4>
+                            <p>Tomasz konsekwentnie przekracza oczekiwania i pełni swoją obecną rolę od 5 lat. Po powrocie z 4-miesięcznego urlopu utrzymuje równowagę między pracą a życiem prywatnym, jednocześnie pogłębiając swoją wiedzę w zakresie swojej roli. Mimo przerwy, nadal sprawnie porusza się po strategicznych tematach biznesowych i wyraża silne pragnienie rozszerzenia swojego zakresu obowiązków oraz podjęcia większych odpowiedzialności z obszaru kompetencji menedżerskich.</p>
+                            
+                            <p>Jako jego menedżer dostrzegasz w nim potencjał przywódczy oraz umiejętność nawiązywania relacji z pracownikami różnych działów, skutecznie łącząc zespoły w celu osiągania wyników. Tomasz doskonale radzi sobie w budowaniu silnych relacji z klientami, wykazując się wyraźnym zrozumieniem ich potrzeb, w tym aspektów finansowych. Jest mocno zmotywowany, aby rozwijać swoją karierę, współpracować w zespole, a także chętnie poszukuje nowych podejść, które mogą przyczynić się do sukcesu.</p>
+                            
+                            <p><strong>Kluczowe pytanie:</strong> Mimo że Tomasz wykazuje duży potencjał do objęcia większych obowiązków menedżerskich, pojawiają się pewne obawy. Potencjał jest widoczny, jednak aby w pełni objąć stanowisko lidera, musi udowodnić, że potrafi poradzić sobie z dodatkową odpowiedzialnością za podejmowanie strategicznych decyzji, które wiążą się z przyszłą rolą.</p>
+                        </div>
+
+                        <div class="case-details-grid">
+                            <div class="case-section">
+                                <h4>📊 Performance (wyniki w obecnej roli):</h4>
+                        
+                        <div class="case-item">
+                            <strong>1. Wyniki ilościowe:</strong>
+                            <ul>
+                                <li>Konsekwentnie przekracza oczekiwania - 105-110% celów rocznie</li>
+                                <li>5 lat w roli - stabilnie wysokie wyniki</li>
+                                <li>Po 4-miesięcznym urlopie szybko wrócił do pełnej efektywności</li>
+                            </ul>
+                        </div>
+
+                        <div class="case-item">
+                            <strong>2. Jakość wykonania:</strong>
+                            <ul>
+                                <li>Wysoka jakość analiz i rekomendacji biznesowych</li>
+                                <li>Rzadko wymaga poprawek - doświadczenie 5 lat widoczne w precyzji</li>
+                                <li>Wyraźne zrozumienie potrzeb klientów, w tym aspektów finansowych</li>
+                            </ul>
+                        </div>
+
+                        <div class="case-item">
+                            <strong>3. Niezawodność:</strong>
+                            <ul>
+                                <li>Bardzo niezawodny przez wszystkie 5 lat w roli</li>
+                                <li>Można na nim polegać w kluczowych projektach</li>
+                                <li>Dotrzymuje commitmentów konsekwentnie</li>
+                            </ul>
+                        </div>
+
+                        <div class="case-item">
+                            <strong>4. Praca pod presją:</strong>
+                            <ul>
+                                <li>Po urlopie sprawnie wraca do wysokiego tempa pracy</li>
+                                <li>Utrzymuje równowagę work-life balance bez utraty efektywności</li>
+                                <li>Radzi sobie z presją, choć preferuje stabilne środowisko</li>
+                            </ul>
+                        </div>
+
+                        <div class="case-item">
+                            <strong>5. Współpraca w zespole:</strong>
+                            <ul>
+                                <li>Skutecznie łączy zespoły międzydziałowe w celu osiągania wyników</li>
+                                <li>Umiejętność nawiązywania relacji z pracownikami różnych działów</li>
+                                <li>Mocno zmotywowany do współpracy zespołowej</li>
+                            </ul>
+                        </div>
+
+                        <div class="case-item">
+                            <strong>6. Komunikacja:</strong>
+                            <ul>
+                                <li>Doskonałe relacje z klientami - rozumie ich potrzeby</li>
+                                <li>Skutecznie komunikuje się z różnymi działami</li>
+                                <li>Jasno artykułuje rekomendacje i uzasadnienia biznesowe</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="case-section">
+                        <h4>🚀 Potential (potencjał do większych ról):</h4>
+                        
+                        <div class="case-item">
+                            <strong>7. Zdolność uczenia się:</strong>
+                            <ul>
+                                <li>Pogłębia swoją wiedzę w zakresie swojej roli konsekwentnie</li>
+                                <li>Po urlopie szybko nadrobił nowe tematy</li>
+                                <li><span class="gap">OGRANICZENIE:</span> Głównie uczy się w ramach swojego obszaru, nie wychodzi poza</li>
+                            </ul>
+                        </div>
+
+                        <div class="case-item">
+                            <strong>8. Ambicja i motywacja:</strong>
+                            <ul>
+                                <li>Wyraża silne pragnienie rozszerzenia zakresu obowiązków</li>
+                                <li>Mocno zmotywowany do rozwoju kariery i podjęcia większych odpowiedzialności</li>
+                                <li><span class="gap">OGRANICZENIE:</span> Ambicja jest, ale trzeba zweryfikować w praktyce</li>
+                            </ul>
+                        </div>
+
+                        <div class="case-item">
+                            <strong>9. Myślenie strategiczne i innowacyjność:</strong>
+                            <ul>
+                                <li>Sprawnie porusza się po strategicznych tematach biznesowych</li>
+                                <li>Chętnie poszukuje nowych podejść, które mogą przyczynić się do sukcesu</li>
+                                <li><span class="gap">OGRANICZENIE:</span> Jeszcze nie podejmował samodzielnie dużych decyzji strategicznych</li>
+                            </ul>
+                        </div>
+
+                        <div class="case-item">
+                            <strong>10. Potencjał przywódczy:</strong>
+                            <ul>
+                                <li>Widoczny potencjał przywódczy w pracy międzydziałowej</li>
+                                <li><span class="gap">OGRANICZENIE:</span> Nie ma jeszcze doświadczenia w formalnym przywództwie</li>
+                                <li><span class="gap">KLUCZOWE:</span> Musi udowodnić, że poradzi sobie z odpowiedzialnością za decyzje</li>
+                            </ul>
+                        </div>
+
+                        <div class="case-item">
+                            <strong>11. Kompleksowość:</strong>
+                            <ul>
+                                <li>Doświadczenie w pracy międzydziałowej - rozumie różne perspektywy</li>
+                                <li>Zrozumienie aspektów biznesowych i finansowych</li>
+                                <li><span class="gap">OGRANICZENIE:</span> 5 lat w tej samej roli - nie testował się w nowych obszarach</li>
+                            </ul>
+                        </div>
+
+                        <div class="case-item">
+                            <strong>12. Samodzielność i inicjatywa:</strong>
+                            <ul>
+                                <li>Chętnie poszukuje nowych podejść i rozwiązań</li>
+                                <li>Wykazuje inicjatywę w ramach swojej roli</li>
+                                <li><span class="gap">OGRANICZENIE:</span> Nie było jeszcze sytuacji wymagającej samodzielnych decyzji wysokiej wagi</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="case-summary">
+                        <strong>Wpływ na organizację:</strong> Solidny, niezawodny performer z widocznym potencjałem przywódczym, ale wymaga potwierdzenia gotowości na większą odpowiedzialność decyzyjną.
+                    </div>
+                        </div>
+                    </div>
+                    
+                    <div class="case-form-container">
+                        <div class="case-assessment" id="assessment-case4">
+                            <!-- Assessment form will be injected here by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Case Study 5: Katarzyna (Narracyjny) -->
+            <section class="case-study" id="case5">
+                <div class="case-header">
+                    <h3>📋 Case Study #5: Katarzyna - Koordynatorka Projektów</h3>
+                </div>
+                
+                <div class="case-layout">
+                    <div class="case-description">
+                        <div class="case-context">
+                            <h4>💡 Uwaga - Format narracyjny (poziom zaawansowany):</h4>
+                            <p>Ten case study jest trudniejszy - informacje nie są uporządkowane według pytań. Musisz sam/a wyciągnąć odpowiednie wnioski z poniższego opisu.</p>
+                        </div>
+
+                        <div class="case-narrative" style="line-height: 1.8;">
+                            <p>Katarzyna pracuje w firmie od 7 lat i od 4 lat pełni rolę Koordynatorki Projektów w dziale operacyjnym. W tym czasie stała się "kręgosłupem" zespołu - można na niej polegać w każdej sytuacji. Jej projekty są zawsze realizowane terminowo, dokumentacja jest perfekcyjna, a klienci wewnętrzni chwalą ją za rzetelność i przewidywalność. Katarzyna osiąga swoje cele na poziomie 95-100% każdego kwartału, choć rzadko je przekracza. Kiedy pytamy dlaczego, odpowiada: "Po co obiecywać więcej, skoro można solidnie zrealizować to, co jest zaplanowane?"</p>
+
+                            <p>W sytuacjach napięcia - np. gdy klient zmienia wymagania w ostatniej chwili lub gdy trzeba dostarczyć wyniki pod presją czasu - Katarzyna zachowuje spokój i profesjonalizm. Nie wpada w panikę, systematycznie rozwiązuje problemy jeden po drugim. Zespół ceni ją za stabilność emocjonalną. Z drugiej strony, w tych gorących momentach Katarzyna trzyma się sprawdzonych procedur i nie eksperymentuje z nowymi rozwiązaniami, nawet jeśli mogłyby przyspieszyć pracę. "Lepiej pewnie niż szybko" - to jej motto.</p>
+
+                            <p>Jeśli chodzi o współpracę, Katarzyna jest uprzejma, dostępna i pomocna. Odpowiada na maile tego samego dnia, uczestniczy w spotkaniach przygotowana i zawsze dotrzymuje zobowiązań wobec innych zespołów. Nie jest jednak osobą, która naturalnie łączy ludzi czy inicjuje współpracę międzydziałową. Czeka, aż ktoś się do niej zgłosi, zamiast sama wychodzić z propozycjami. W opinii menedżera jest "solidnym graczem zespołowym", ale nie kimś, kto napędza współpracę.</p>
+
+                            <p>Komunikacja Katarzyny jest jasna i precyzyjna, szczególnie w formie pisemnej. Raporty, które przygotowuje, są wzorowe - kompletne, zrozumiałe, bez błędów. W komunikacji ustnej bywa mniej pewna siebie, szczególnie w większych grupach. Podczas prezentacji dla zarządu widać było, że czuje dyskomfort. Preferuje pracę "za kulisami" - przygotowywanie dokumentów, koordynację, administrację - zamiast bycia na pierwszej linii.</p>
+
+                            <p>Co ciekawe, Katarzyna nie wykazuje większego zainteresowania nowymi narzędziami czy metodologiami projektowymi. Kiedy firma wprowadzała nowy system zarządzania projektami, nauczyła się go, ale tylko w zakresie niezbędnym do wykonywania swojej pracy. Nie zgłębiała dodatkowych funkcji ani nie szukała sposobów, jak wykorzystać system bardziej efektywnie. Na szkoleniu z Agile przyszła, bo była obowiązkowa, ale później powiedziała menedżerowi: "To ciekawe, ale nasze Waterfall sprawdza się od lat, po co zmieniać?"</p>
+
+                            <p>W rozmowach rozwojowych Katarzyna mówi, że jest zadowolona ze swojej roli. Kiedy menedżer zapytał, czy rozważała objęcie roli Project Managera (wyższego stanowiska z odpowiedzialnością za budżet i zespół), odpowiedziała: "Wolę koordynować niż zarządzać. Lubię mieć jasny zakres i nie chcę odpowiadać za decyzje biznesowe." Nie uczestniczy w programach rozwojowych wykraczających poza jej obecną rolę i nie zgłasza się na projekty międzyfunkcyjne, które mogłyby rozszerzyć jej kompetencje.</p>
+
+                            <p>Kilka miesięcy temu pojawił się problem z procesem raportowania - raporty były spóźnione o 2 dni, co blokowało zespół finansowy. Katarzyna zidentyfikowała, że problem leży w opóźnieniach od zespołu sprzedaży. Zamiast zaproponować zmianę procesu lub porozmawiać bezpośrednio ze sprzedażą o wcześniejszych deadline'ach, eskalowała temat do swojego menedżera i czekała na jego interwencję. Problem się rozwiązał, ale dopiero po dwóch tygodniach.</p>
+
+                            <p>Katarzyna ma głęboką wiedzę o procesach projektowych w firmie - zna każdy formularz, każdy krok, każdą procedurę. Jest "chodzącą encyklopedią" tego, jak się rzeczy robi. Ale gdy pojawiają się projekty niestandardowe - np. hybrydowe, łączące elementy IT i operacji - przyznaje, że to nie jej mocna strona. "Niech zajmie się tym ktoś, kto ma szerszą perspektywę" - powiedziała ostatnio.</p>
+
+                            <p>Menedżer Katarzyny podsumowuje: "Katarzyna to absolutnie niezawodna osoba. Wiem, że jeśli jej coś zlecę w ramach jej zakresu, będzie zrobione perfekcyjnie i na czas. Ale nie widzę w niej ognia - chęci wzięcia większej odpowiedzialności, zainicjowania czegoś nowego, wyjścia poza swój komfort. Jest dokładnie tam, gdzie chce być, i wydaje się, że to jej w zupełności wystarcza."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="case-form-container">
+                        <div class="case-assessment" id="assessment-case5">
+                            <!-- Assessment form will be injected here by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

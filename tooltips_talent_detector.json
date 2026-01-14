@@ -1,0 +1,478 @@
+﻿{
+  "performance": {
+    "wymiar": "Performance",
+    "opis": "Wydajność / Wyniki",
+    "pytania": {
+      "Q1": {
+        "tytul": "Dostarczanie wyników",
+        "opis": "Pracownik osiąga wyniki zgodne z celami i oczekiwaniami stanowiska",
+        "poziomy": {
+          "1": {
+            "tytul": "Poniżej oczekiwań",
+            "przyklady": [
+              "cele są realizowane rzadko lub w ograniczonym zakresie",
+              "pojawiają się istotne trudności z dowożeniem wyników nawet w sprzyjających warunkach",
+              "wymagane jest częste wsparcie lub interwencja, aby osiągnąć podstawowe rezultaty"
+            ]
+          },
+          "2": {
+            "tytul": "Częściowo spełnia oczekiwania",
+            "przyklady": [
+              "realizuje cele nieregularnie lub z opóźnieniami",
+              "dowozi wyniki w sprzyjających warunkach, ale ma trudność w sytuacjach bardziej wymagających",
+              "potrzebuje wsparcia w priorytetyzacji lub egzekucji zadań, aby osiągnąć zakładane rezultaty"
+            ]
+          },
+          "3": {
+            "tytul": "Spełnia oczekiwania",
+            "przyklady": [
+              "realizuje uzgodnione cele zgodnie z planem i priorytetami",
+              "dowozi wyniki w typowych warunkach pracy dla danej roli",
+              "bierze odpowiedzialność za własny zakres zadań i terminowo je realizuje"
+            ]
+          },
+          "4": {
+            "tytul": "Powyżej oczekiwań",
+            "przyklady": [
+              "regularnie osiąga lub przekracza cele w sytuacjach trudniejszych niż standardowe (np. ograniczone zasoby, presja czasu)",
+              "dowozi kluczowe rezultaty również wtedy, gdy warunki się zmieniają lub cele są niejednoznaczne",
+              "bierze odpowiedzialność za wynik zespołu lub obszaru, a nie tylko własny zakres zadań"
+            ]
+          }
+        }
+      },
+      "Q2": {
+        "tytul": "Jakość i dokładność pracy",
+        "opis": "Jakość pracy i dokładność wykonania zadań są na wysokim poziomie",
+        "poziomy": {
+          "1": {
+            "tytul": "Poniżej oczekiwań",
+            "przyklady": [
+              "jakość pracy często nie spełnia ustalonych standardów",
+              "błędy pojawiają się regularnie i wymagają poprawek ze strony innych",
+              "procedury lub dobre praktyki nie są stosowane konsekwentnie"
+            ]
+          },
+          "2": {
+            "tytul": "Częściowo spełnia oczekiwania",
+            "przyklady": [
+              "jakość pracy jest nierówna i wymaga poprawek częściej niż zakłada standard roli",
+              "popełnia błędy, które są korygowane dopiero po zwróceniu uwagi",
+              "nie zawsze konsekwentnie stosuje ustalone procedury lub dobre praktyki"
+            ]
+          },
+          "3": {
+            "tytul": "Spełnia oczekiwania",
+            "przyklady": [
+              "dostarcza pracę zgodną z wymaganiami i standardami jakości",
+              "popełnia sporadyczne błędy, które są szybko korygowane",
+              "stosuje ustalone procedury i dobre praktyki"
+            ]
+          },
+          "4": {
+            "tytul": "Powyżej oczekiwań",
+            "przyklady": [
+              "dostarcza pracę o wysokiej jakości bez potrzeby poprawek, także przy złożonych lub nowych zadaniach",
+              "sam/a identyfikuje ryzyka jakościowe i zapobiega błędom, zanim się pojawią",
+              "podnosi standard jakości w zespole (np. proponuje usprawnienia, checklisty, dobre praktyki)"
+            ]
+          }
+        }
+      },
+      "Q3": {
+        "tytul": "Niezawodność i konsekwencja",
+        "opis": "Pracownik działa niezależnie / samodzielnie bądź samodzielnie znajduje odpowiednie wsparcie",
+        "poziomy": {
+          "1": {
+            "tytul": "Poniżej oczekiwań",
+            "przyklady": [
+              "zobowiązania nie są realizowane terminowo lub w pełnym zakresie",
+              "trudno przewidzieć poziom realizacji zadań",
+              "konieczna jest stała kontrola lub przypominanie, aby zadania zostały wykonane"
+            ]
+          },
+          "2": {
+            "tytul": "Częściowo spełnia oczekiwania",
+            "przyklady": [
+              "wywiązuje się z ustaleń, ale nie zawsze terminowo lub w pełnym zakresie",
+              "wymaga przypomnień lub kontroli, aby domykać zadania",
+              "poziom realizacji zadań jest zmienny w czasie"
+            ]
+          },
+          "3": {
+            "tytul": "Spełnia oczekiwania",
+            "przyklady": [
+              "jest terminowa/y i wywiązuje się z ustaleń",
+              "można na niej/nim polegać w codziennej pracy",
+              "utrzymuje przewidywalny poziom realizacji zadań"
+            ]
+          },
+          "4": {
+            "tytul": "Powyżej oczekiwań",
+            "przyklady": [
+              "można na niej/nim polegać w krytycznych momentach lub projektach o wysokiej wadze",
+              "samodzielnie organizuje pracę i wsparcie, bez potrzeby stałej kontroli",
+              "utrzymuje stabilny poziom dowożenia nawet przy dużym obciążeniu lub niepewności"
+            ]
+          }
+        }
+      },
+      "Q4": {
+        "tytul": "Radzenie sobie z presją i zmianą",
+        "opis": "Skutecznie radzi sobie w sytuacjach presji, zmian i niejednoznaczności",
+        "poziomy": {
+          "1": {
+            "tytul": "Poniżej oczekiwań",
+            "przyklady": [
+              "presja lub zmiana wyraźnie obniżają skuteczność działania",
+              "adaptacja do nowych warunków jest trudna nawet przy jasnych wytycznych",
+              "napięcie wpływa na jakość pracy lub współpracę z innymi"
+            ]
+          },
+          "2": {
+            "tytul": "Częściowo spełnia oczekiwania",
+            "przyklady": [
+              "radzi sobie z presją w prostych, przewidywalnych sytuacjach",
+              "potrzebuje czasu lub dodatkowego wsparcia, aby zaadaptować się do zmian",
+              "w sytuacjach napięcia traci chwilowo skuteczność lub pewność działania"
+            ]
+          },
+          "3": {
+            "tytul": "Spełnia oczekiwania",
+            "przyklady": [
+              "zachowuje skuteczność w standardowych sytuacjach presji",
+              "adaptuje się do zmian po otrzymaniu jasnych wytycznych",
+              "nie przenosi napięcia na innych i zachowuje profesjonalizm"
+            ]
+          },
+          "4": {
+            "tytul": "Powyżej oczekiwań",
+            "przyklady": [
+              "zachowuje skuteczność i spokój w sytuacjach dużej presji lub chaosu",
+              "szybko adaptuje się do zmian i pomaga innym odnaleźć się w nowej sytuacji",
+              "potrafi podejmować dobre decyzje mimo niepełnych informacji"
+            ]
+          }
+        }
+      },
+      "Q5": {
+        "tytul": "Współpraca i wpływ na innych",
+        "opis": "Wnosi pozytywny wpływ na zespół - wspiera, dzieli się wiedzą, inspiruje innych",
+        "poziomy": {
+          "1": {
+            "tytul": "Poniżej oczekiwań",
+            "przyklady": [
+              "współpraca z innymi jest ograniczona lub utrudniona",
+              "informacje nie są przekazywane w sposób wystarczający do realizacji zadań",
+              "relacje robocze wymagają wsparcia lub moderacji"
+            ]
+          },
+          "2": {
+            "tytul": "Częściowo spełnia oczekiwania",
+            "przyklady": [
+              "współpracuje poprawnie, ale głównie w swoim bezpośrednim zakresie",
+              "dzieli się informacjami, gdy zostanie o to poproszona/y",
+              "rzadko inicjuje współpracę lub wsparcie dla innych"
+            ]
+          },
+          "3": {
+            "tytul": "Spełnia oczekiwania",
+            "przyklady": [
+              "współpracuje w sposób otwarty i profesjonalny",
+              "dzieli się informacjami potrzebnymi do realizacji zadań",
+              "respektuje role i ustalenia zespołowe"
+            ]
+          },
+          "4": {
+            "tytul": "Powyżej oczekiwań",
+            "przyklady": [
+              "realnie wpływa na jakość współpracy w zespole lub między zespołami",
+              "dzieli się wiedzą i doświadczeniem w sposób, który przyspiesza pracę innych",
+              "jest naturalnym \"punktem odniesienia\" lub partnerem do rozwiązywania trudnych tematów"
+            ]
+          }
+        }
+      },
+      "Q6": {
+        "tytul": "Komunikacja",
+        "opis": "Pracownik chętnie współpracuje z innymi, okazuje szacunek, komunikuje się otwarcie oraz aktywnie wymienia się informacją zwrotną",
+        "poziomy": {
+          "1": {
+            "tytul": "Poniżej oczekiwań",
+            "przyklady": [
+              "komunikacja jest ograniczona, niejasna lub niespójna",
+              "informacje są przekazywane wybiórczo, z opóźnieniem lub po fakcie",
+              "sposób komunikacji utrudnia współpracę lub prowadzi do nieporozumień",
+              "reagowanie na informację zwrotną jest defensywne lub minimalne"
+            ]
+          },
+          "2": {
+            "tytul": "Częściowo spełnia oczekiwania",
+            "przyklady": [
+              "komunikuje się poprawnie w prostych, rutynowych sytuacjach",
+              "przekazuje informacje, gdy jest o to poproszona/y, ale rzadko inicjuje komunikację",
+              "otwartość i współpraca są nierówne i zależne od kontekstu lub relacji",
+              "przyjmuje informację zwrotną, ale nie zawsze przekłada ją na zmianę zachowania"
+            ]
+          },
+          "3": {
+            "tytul": "Spełnia oczekiwania",
+            "przyklady": [
+              "komunikuje się w sposób jasny, otwarty i z szacunkiem",
+              "regularnie wymienia się informacjami niezbędnymi do realizacji zadań",
+              "współpracuje konstruktywnie z innymi",
+              "przyjmuje informację zwrotną i reaguje na nią w profesjonalny sposób"
+            ]
+          },
+          "4": {
+            "tytul": "Powyżej oczekiwań",
+            "przyklady": [
+              "aktywnie dba o jakość komunikacji w zespole lub między zespołami",
+              "jasno formułuje oczekiwania, słucha i dopasowuje styl komunikacji do rozmówcy",
+              "inicjuje otwartą wymianę informacji i informacji zwrotnej",
+              "zapobiega nieporozumieniom i wspiera innych w skutecznej współpracy"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "potential": {
+    "wymiar": "Potential",
+    "opis": "Potencjał rozwojowy",
+    "pytania": {
+      "Q7": {
+        "tytul": "Zdolność uczenia się i adaptacji",
+        "opis": "Pracownik szybko się uczy i z łatwością adaptuje do nowych zadań, technologii",
+        "poziomy": {
+          "1": {
+            "tytul": "Poniżej oczekiwań",
+            "przyklady": [
+              "przyswajanie nowych umiejętności jest znacząco wolniejsze niż zakłada standard roli",
+              "trudności pojawiają się w przełożeniu wiedzy na praktykę",
+              "informacja zwrotna nie prowadzi do zauważalnej zmiany sposobu działania"
+            ]
+          },
+          "2": {
+            "tytul": "Częściowo spełnia oczekiwania",
+            "przyklady": [
+              "uczy się nowych umiejętności wolniej niż zakłada standard roli",
+              "potrzebuje dodatkowego czasu lub wsparcia, aby przełożyć wiedzę na praktykę",
+              "reaguje na informację zwrotną, ale nie zawsze wdraża ją konsekwentnie"
+            ]
+          },
+          "3": {
+            "tytul": "Spełnia oczekiwania",
+            "przyklady": [
+              "przyswaja nowe umiejętności w tempie odpowiednim dla roli",
+              "stosuje zdobytą wiedzę w praktyce po okresie wdrożenia",
+              "reaguje konstruktywnie na informację zwrotną"
+            ]
+          },
+          "4": {
+            "tytul": "Powyżej oczekiwań",
+            "przyklady": [
+              "bardzo szybko przyswaja nowe umiejętności i skutecznie stosuje je w praktyce",
+              "sam/a aktywnie poszukuje nowych obszarów rozwoju bez formalnego impulsu",
+              "uczy się na błędach i wyraźnie zmienia sposób działania na przyszłość"
+            ]
+          }
+        }
+      },
+      "Q8": {
+        "tytul": "Ambicja i motywacja do rozwoju",
+        "opis": "Wykazuje chęć rozwoju zawodowego oraz motywację do podejmowania trudniejszych wyzwań",
+        "poziomy": {
+          "1": {
+            "tytul": "Poniżej oczekiwań",
+            "przyklady": [
+              "zainteresowanie rozwojem jest ograniczone lub krótkotrwałe",
+              "cele rozwojowe nie są realizowane nawet przy wsparciu",
+              "rzadko pojawia się gotowość do podejmowania nowych wyzwań"
+            ]
+          },
+          "2": {
+            "tytul": "Częściowo spełnia oczekiwania",
+            "przyklady": [
+              "deklaruje chęć rozwoju, ale działania rozwojowe są nieregularne",
+              "realizuje cele rozwojowe głównie po zewnętrznym impulsie",
+              "rzadko samodzielnie zgłasza gotowość do podejmowania nowych wyzwań"
+            ]
+          },
+          "3": {
+            "tytul": "Spełnia oczekiwania",
+            "przyklady": [
+              "wykazuje zainteresowanie rozwojem w ramach obecnej roli",
+              "realizuje uzgodnione cele rozwojowe",
+              "jest otwarta/y na nowe zadania, gdy się pojawiają"
+            ]
+          },
+          "4": {
+            "tytul": "Powyżej oczekiwań",
+            "przyklady": [
+              "jasno komunikuje chęć rozwoju i bierze odpowiedzialność za własną ścieżkę",
+              "podejmuje się trudniejszych zadań lub wyzwań wykraczających poza aktualną rolę",
+              "konsekwentnie inwestuje czas i energię w rozwój kompetencji"
+            ]
+          }
+        }
+      },
+      "Q9": {
+        "tytul": "Myślenie strategiczne i innowacyjność",
+        "opis": "Widzi szerszy kontekst działań, potrafi proponować nowe rozwiązania i ulepszenia",
+        "poziomy": {
+          "1": {
+            "tytul": "Poniżej oczekiwań",
+            "przyklady": [
+              "koncentracja pozostaje niemal wyłącznie na bieżących zadaniach",
+              "trudne jest dostrzeganie szerszego kontekstu działań",
+              "inicjatywa w zakresie usprawnień lub nowych rozwiązań praktycznie się nie pojawia"
+            ]
+          },
+          "2": {
+            "tytul": "Częściowo spełnia oczekiwania",
+            "przyklady": [
+              "koncentruje się głównie na bieżących zadaniach",
+              "dostrzega szerszy kontekst dopiero po jego wskazaniu",
+              "rzadko proponuje usprawnienia lub nowe rozwiązania z własnej inicjatywy"
+            ]
+          },
+          "3": {
+            "tytul": "Spełnia oczekiwania",
+            "przyklady": [
+              "rozumie kontekst swoich działań i ich wpływ na cele zespołu",
+              "proponuje usprawnienia w swoim obszarze odpowiedzialności",
+              "działa zgodnie z przyjętymi kierunkami i priorytetami"
+            ]
+          },
+          "4": {
+            "tytul": "Powyżej oczekiwań",
+            "przyklady": [
+              "widzi zależności i konsekwencje działań w szerszym kontekście biznesowym",
+              "proponuje rozwiązania, które realnie usprawniają procesy lub sposób działania",
+              "nie ogranicza się do \"jak jest\", lecz aktywnie szuka \"jak może być lepiej\""
+            ]
+          }
+        }
+      },
+      "Q10": {
+        "tytul": "Potencjał przywódczy i wpływ",
+        "opis": "Wykazuje cechy przywódcze - potrafi wpływać na innych, motywować i organizować współpracę",
+        "poziomy": {
+          "1": {
+            "tytul": "Poniżej oczekiwań",
+            "przyklady": [
+              "unika odpowiedzialności wykraczającej poza podstawowy zakres zadań",
+              "komunikacja nie wspiera budowania zaangażowania lub jasności działań",
+              "nie przejawia gotowości do pełnienia ról wymagających większego wpływu"
+            ]
+          },
+          "2": {
+            "tytul": "Częściowo spełnia oczekiwania",
+            "przyklady": [
+              "potrafi wziąć odpowiedzialność za zadanie po wyraźnym wskazaniu",
+              "komunikuje się poprawnie, ale ma trudność z wywieraniem wpływu",
+              "niechętnie wychodzi poza formalnie przypisany zakres roli"
+            ]
+          },
+          "3": {
+            "tytul": "Spełnia oczekiwania",
+            "przyklady": [
+              "potrafi wziąć odpowiedzialność za zadanie lub fragment pracy zespołu",
+              "komunikuje się jasno i konstruktywnie",
+              "jest gotowa/y do rozwoju w kierunku większego wpływu, jeśli zajdzie taka potrzeba"
+            ]
+          },
+          "4": {
+            "tytul": "Powyżej oczekiwań",
+            "przyklady": [
+              "naturalnie bierze odpowiedzialność za innych, nawet bez formalnej roli lidera",
+              "potrafi motywować, porządkować pracę lub integrować ludzi wokół celu",
+              "jest postrzegana/y przez innych jako autorytet lub osoba, za którą \"chce się iść\""
+            ]
+          }
+        }
+      },
+      "Q11": {
+        "tytul": "Kompleksowość",
+        "opis": "Wykazuje zdolność do pracy nad złożonymi projektami i przejmowania szerszej odpowiedzialności",
+        "poziomy": {
+          "1": {
+            "tytul": "Poniżej oczekiwań",
+            "przyklady": [
+              "nawet umiarkowana złożoność zadań powoduje trudności w działaniu",
+              "problemy są rozwiązywane fragmentarycznie lub chaotycznie",
+              "często potrzebne jest intensywne wsparcie przy podejmowaniu decyzji"
+            ]
+          },
+          "2": {
+            "tytul": "Częściowo spełnia oczekiwania",
+            "przyklady": [
+              "radzi sobie z prostymi lub dobrze zdefiniowanymi problemami",
+              "ma trudność z porządkowaniem wielu wątków jednocześnie",
+              "często potrzebuje wsparcia przy zadaniach nietypowych lub niejednoznacznych"
+            ]
+          },
+          "3": {
+            "tytul": "Spełnia oczekiwania",
+            "przyklady": [
+              "radzi sobie z typową złożonością zadań w ramach roli",
+              "porządkuje informacje i podejmuje logiczne decyzje",
+              "korzysta ze wsparcia lub konsultacji w sytuacjach nietypowych"
+            ]
+          },
+          "4": {
+            "tytul": "Powyżej oczekiwań",
+            "przyklady": [
+              "skutecznie radzi sobie z wielowątkowymi, niejednoznacznymi problemami",
+              "łączy różne perspektywy (biznesowe, operacyjne, ludzkie) w spójne rozwiązania",
+              "stopniowo przejmuje odpowiedzialność za coraz bardziej złożone zadania lub decyzje"
+            ]
+          }
+        }
+      },
+      "Q12": {
+        "tytul": "Samodzielność i inicjatywa/sprawczość",
+        "opis": "Przejmuje inicjatywę w realizacji zadań i poszukuje sposobów na usprawnienie pracy własnej i zespołu",
+        "poziomy": {
+          "1": {
+            "tytul": "Poniżej oczekiwań",
+            "przyklady": [
+              "działa głównie reaktywnie i oczekuje szczegółowych instrukcji",
+              "rzadko przejmuje inicjatywę lub odpowiedzialność za sposób realizacji zadań",
+              "ma trudność z samodzielnym rozwiązywaniem problemów",
+              "nie wykazuje zainteresowania usprawnianiem pracy własnej ani zespołu"
+            ]
+          },
+          "2": {
+            "tytul": "Częściowo spełnia oczekiwania",
+            "przyklady": [
+              "przejmuje inicjatywę w prostych lub dobrze znanych obszarach",
+              "potrafi działać samodzielnie po otrzymaniu jasnych ram lub wskazówek",
+              "zgłasza pomysły usprawnień sporadycznie lub po zachęcie",
+              "w nowych lub niejednoznacznych sytuacjach waha się przed podjęciem działania"
+            ]
+          },
+          "3": {
+            "tytul": "Spełnia oczekiwania",
+            "przyklady": [
+              "samodzielnie organizuje swoją pracę i realizuje zadania w ramach roli",
+              "podejmuje inicjatywę w obszarach, za które odpowiada",
+              "aktywnie poszukuje sposobów usprawnienia własnej pracy",
+              "reaguje na problemy bez konieczności stałego nadzoru"
+            ]
+          },
+          "4": {
+            "tytul": "Powyżej oczekiwań",
+            "przyklady": [
+              "konsekwentnie przejmuje odpowiedzialność za efekty, nie tylko za zadania",
+              "inicjuje działania wykraczające poza obecny zakres roli",
+              "proponuje i wdraża usprawnienia o realnym wpływie na zespół lub obszar",
+              "zachęca innych do działania i buduje poczucie sprawczości wokół siebie"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
