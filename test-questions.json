@@ -48,48 +48,48 @@
       "category": "9-Box Grid",
       "text": "Pracownik z wysokim Performance, ale niskim Potential to:",
       "answers": [
-        { "text": "Kluczowy Gracz (Q6) - cenny ekspert w swojej dziedzinie", "correct": true },
+        { "text": "Expert (Q7) - cenny ekspert w swojej dziedzinie", "correct": true },
         { "text": "Gwiazda (Q9) - kandydat do szybkiego awansu", "correct": false },
-        { "text": "Stabilny Wykonawca (Q5) - przeciętny wykonawca", "correct": false },
-        { "text": "Niewydajny (Q1) - wymaga działań naprawczych", "correct": false }
+        { "text": "Kluczowy pracownik (Q5) - przeciętny wykonawca", "correct": false },
+        { "text": "Słaby wykonawca (Q1) - wymaga działań naprawczych", "correct": false }
       ],
-      "explanation": "Q6 (Kluczowy Gracz) to wartościowi eksperci z wysokim Performance ale niskim Potential - świetnie wykonują pracę, ale nie dążą do większej odpowiedzialności."
+      "explanation": "Q7 (Expert) to wartościowi eksperci z wysokim Performance ale niskim Potential - świetnie wykonują pracę, ale nie dążą do większej odpowiedzialności."
     },
     {
       "id": "q5",
       "category": "9-Box Grid",
       "text": "Pracownik z niskim Performance, ale wysokim Potential to:",
       "answers": [
-        { "text": "Zagadka (Q7) - wymaga analizy przyczyn słabych wyników", "correct": true },
+        { "text": "Enigma (Q3) - wymaga analizy przyczyn słabych wyników", "correct": true },
         { "text": "Gwiazda (Q9) - priorytet rozwojowy", "correct": false },
-        { "text": "Stabilny Wykonawca (Q5) - solidny wykonawca", "correct": false },
-        { "text": "Niewydajny (Q1) - kandydat do zwolnienia", "correct": false }
+        { "text": "Kluczowy pracownik (Q5) - solidny wykonawca", "correct": false },
+        { "text": "Słaby wykonawca (Q1) - kandydat do zwolnienia", "correct": false }
       ],
-      "explanation": "Q7 (Zagadka/Enigma) to sytuacja, gdzie widzimy potencjał, ale wyniki są słabe. Trzeba zrozumieć dlaczego - dopasowanie roli, onboarding, przeszkody."
+      "explanation": "Q3 (Enigma) to sytuacja, gdzie widzimy potencjał, ale wyniki są słabe. Trzeba zrozumieć dlaczego - dopasowanie roli, onboarding, przeszkody."
     },
     {
       "id": "q6",
       "category": "Interpretacja zachowań",
-      "text": "Pracownik realizuje 100% swoich celów, ale nigdy nie wychodzi z inicjatywą poza swój zakres. Gdzie go umieścisz?",
+      "text": "Pracownik realizuje 100% swoich celów, but nigdy nie wychodzi z inicjatywą poza swój zakres. Gdzie go umieścisz?",
       "answers": [
-        { "text": "Wysokie Performance, niskie Potential (Q6 - Kluczowy Gracz)", "correct": true },
+        { "text": "Wysokie Performance, niskie Potential (Q7 - Expert)", "correct": true },
         { "text": "Wysokie Performance, wysokie Potential (Q9 - Gwiazda)", "correct": false },
-        { "text": "Średnie Performance, średnie Potential (Q5 - Stabilny Wykonawca)", "correct": false },
-        { "text": "Niskie Performance, wysokie Potential (Q7 - Zagadka)", "correct": false }
+        { "text": "Średnie Performance, średnie Potential (Q5 - Kluczowy pracownik)", "correct": false },
+        { "text": "Niskie Performance, wysokie Potential (Q3 - Enigma)", "correct": false }
       ],
-      "explanation": "Brak inicjatywy i dążenia do rozszerzania zakresu to sygnał niskiego potential. Performance jest wysokie, ale brak ambicji rozwojowej - to Q6 Kluczowy Gracz."
+      "explanation": "Brak inicjatywy i dążenia do rozszerzania zakresu to sygnał niskiego potential. Performance jest wysokie, ale brak ambicji rozwojowej - to Q7 Expert."
     },
     {
       "id": "q7",
       "category": "Interpretacja zachowań",
       "text": "Nowy pracownik pokazuje szybkie tempo uczenia się, proponuje usprawnienia i pomaga innym. Wyniki są średnie (60% celów), bo jest dopiero 3 miesiące w firmie. Gdzie go umieścisz?",
       "answers": [
-        { "text": "Średnie Performance, wysokie Potential (Q8 - Wschodzący Talent)", "correct": true },
-        { "text": "Niskie Performance, wysokie Potential (Q7 - Zagadka)", "correct": false },
+        { "text": "Średnie Performance, wysokie Potential (Q6 - Przyszła gwiazda)", "correct": true },
+        { "text": "Niskie Performance, wysokie Potential (Q3 - Enigma)", "correct": false },
         { "text": "Wysokie Performance, wysokie Potential (Q9 - Gwiazda)", "correct": false },
-        { "text": "Średnie Performance, średnie Potential (Q5 - Stabilny Wykonawca)", "correct": false }
+        { "text": "Średnie Performance, średnie Potential (Q5 - Kluczowy pracownik)", "correct": false }
       ],
-      "explanation": "Krótki staż + wysokie sygnały potential (uczenie się, proaktywność) + rosnące wyniki = Q8 Wschodzący Talent. Za wcześnie na Q9 Gwiazdę, ale widać potencjał."
+      "explanation": "Krótki staż + wysokie sygnały potential (uczenie się, proaktywność) + rosnące wyniki = Q6 Przyszła gwiazda. Za wcześnie na Q9 Gwiazdę, ale widać potencjał."
     },
     {
       "id": "q8",
@@ -118,14 +118,14 @@
     {
       "id": "q10",
       "category": "Działania rozwojowe",
-      "text": "Co powinieneś zrobić z pracownikiem z wysokim Performance, ale niskim Potential (Q6 - Kluczowy Gracz)?",
+      "text": "Co powinieneś zrobić z pracownikiem z wysokim Performance, ale niskim Potential (Q7 - Expert)?",
       "answers": [
         { "text": "Utrzymać w roli eksperta, doceniać ekspertyzę, nie forsować awansu menedżerskiego", "correct": true },
         { "text": "Natychmiast awansować na stanowisko menedżerskie jako nagrodę za wyniki", "correct": false },
         { "text": "Umieścić na liście do redukcji etatów, bo brak potential", "correct": false },
         { "text": "Zmusić do wzięcia większej odpowiedzialności aby rozwinąć potential", "correct": false }
       ],
-      "explanation": "Q6 (Kluczowy Gracz) to cenne zasoby - eksperci techniczni, specjaliści. Należy ich doceniać w ich roli, a nie forsować ścieżki menedżerskiej."
+      "explanation": "Q7 (Expert) to cenne zasoby - eksperci techniczni, specjaliści. Należy ich doceniać w ich roli, a nie forsować ścieżki menedżerskiej."
     }
   ]
 }
