@@ -1,0 +1,131 @@
+{
+  "testInfo": {
+    "title": "Knowledge Test - Talent Management",
+    "description": "Test your knowledge about talent assessment, 9-box grid and employee categories",
+    "timeLimit": 10,
+    "passingScore": 80,
+    "totalQuestions": 10
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "category": "Core Definitions",
+      "text": "What is 'Performance' in talent assessment context?",
+      "answers": [
+        { "text": "Current results and effectiveness in achieving role objectives", "correct": true },
+        { "text": "Employee's ability to develop and advance in the future", "correct": false },
+        { "text": "Employee motivation and engagement in company activities", "correct": false },
+        { "text": "Work tenure and professional experience", "correct": false }
+      ],
+      "explanation": "Performance is about current results - how effectively an employee achieves their role objectives."
+    },
+    {
+      "id": "q2",
+      "category": "Core Definitions",
+      "text": "What is 'Potential' in talent assessment context?",
+      "answers": [
+        { "text": "Ability to grow and take on greater responsibility in the future", "correct": true },
+        { "text": "Current effectiveness in task completion", "correct": false },
+        { "text": "Number of completed training courses", "correct": false },
+        { "text": "Level of satisfaction with current role", "correct": false }
+      ],
+      "explanation": "Potential is the ability and readiness to take on greater responsibility and grow into more complex roles."
+    },
+    {
+      "id": "q3",
+      "category": "9-Box Grid",
+      "text": "An employee with high Performance and high Potential is:",
+      "answers": [
+        { "text": "Star (Q9) - top development priority", "correct": true },
+        { "text": "Key Player (Q6) - experienced expert", "correct": false },
+        { "text": "Rising Talent (Q8) - still needs experience", "correct": false },
+        { "text": "Stable Performer (Q5) - solid contributor", "correct": false }
+      ],
+      "explanation": "Q9 (Star) are employees in top-right corner of 9-box - high Performance + high Potential. They're the top development priority."
+    },
+    {
+      "id": "q4",
+      "category": "9-Box Grid",
+      "text": "An employee with high Performance but low Potential is:",
+      "answers": [
+        { "text": "Expert (Q7) - valuable specialist in their field", "correct": true },
+        { "text": "Star (Q9) - fast-track promotion candidate", "correct": false },
+        { "text": "Key employee (Q5) - average performer", "correct": false },
+        { "text": "Poor performer (Q1) - requires corrective action", "correct": false }
+      ],
+      "explanation": "Q7 (Expert) are valuable specialists with high Performance but low Potential - they excel at their work but don't seek greater responsibility."
+    },
+    {
+      "id": "q5",
+      "category": "9-Box Grid",
+      "text": "An employee with low Performance but high Potential is:",
+      "answers": [
+        { "text": "Enigma (Q3) - requires analysis of poor results causes", "correct": true },
+        { "text": "Star (Q9) - development priority", "correct": false },
+        { "text": "Key employee (Q5) - solid performer", "correct": false },
+        { "text": "Poor performer (Q1) - termination candidate", "correct": false }
+      ],
+      "explanation": "Q3 (Enigma) is when we see potential but results are poor. Need to understand why - role fit, onboarding, obstacles."
+    },
+    {
+      "id": "q6",
+      "category": "Behavior Interpretation",
+      "text": "An employee achieves 100% of their goals but never takes initiative beyond their scope. Where would you place them?",
+      "answers": [
+        { "text": "High Performance, low Potential (Q7 - Expert)", "correct": true },
+        { "text": "High Performance, high Potential (Q9 - Star)", "correct": false },
+        { "text": "Medium Performance, medium Potential (Q5 - Key employee)", "correct": false },
+        { "text": "Low Performance, high Potential (Q3 - Enigma)", "correct": false }
+      ],
+      "explanation": "Lack of initiative and drive to expand scope signals low potential. Performance is high, but lacks development ambition - that's Q7 Expert."
+    },
+    {
+      "id": "q7",
+      "category": "Behavior Interpretation",
+      "text": "A new employee shows fast learning pace, proposes improvements and helps others. Results are average (60% of goals) as they've only been with company 3 months. Where would you place them?",
+      "answers": [
+        { "text": "Medium Performance, high Potential (Q6 - Future Star)", "correct": true },
+        { "text": "Low Performance, high Potential (Q3 - Enigma)", "correct": false },
+        { "text": "High Performance, high Potential (Q9 - Star)", "correct": false },
+        { "text": "Medium Performance, medium Potential (Q5 - Key employee)", "correct": false }
+      ],
+      "explanation": "Short tenure + high potential signals (learning, proactivity) + growing results = Q6 Future Star. Too early for Q9 Star, but potential is visible."
+    },
+    {
+      "id": "q8",
+      "category": "Potential Indicators",
+      "text": "Which of the following is the STRONGEST indicator of high Potential?",
+      "answers": [
+        { "text": "Voluntarily takes on more challenging tasks and responsibility beyond their role", "correct": true },
+        { "text": "Has long tenure with company (5+ years)", "correct": false },
+        { "text": "Is well-liked by the team", "correct": false },
+        { "text": "Completed many professional trainings", "correct": false }
+      ],
+      "explanation": "Best indicator of potential is BEHAVIOR - voluntarily expanding scope and taking on responsibility. It shows ambition and readiness."
+    },
+    {
+      "id": "q9",
+      "category": "Assessment Errors",
+      "text": "A manager rates all their employees as 'above expectations' because 'they don't want to demotivate them'. What is this?",
+      "answers": [
+        { "text": "Leniency bias - tendency to inflate ratings", "correct": true },
+        { "text": "Halo effect - rating based on one trait", "correct": false },
+        { "text": "Recency bias - focusing on recent events", "correct": false },
+        { "text": "Correct approach - motivation is most important", "correct": false }
+      ],
+      "explanation": "Leniency bias is the tendency toward leniency and rating inflation. It destroys credibility of assessment system and prevents development."
+    },
+    {
+      "id": "q10",
+      "category": "Development Actions",
+      "text": "What should you do with an employee with high Performance but low Potential (Q7 - Expert)?",
+      "answers": [
+        { "text": "Keep in expert role, appreciate expertise, don't force managerial promotion", "correct": true },
+        { "text": "Immediately promote to managerial position as reward for results", "correct": false },
+        { "text": "Place on reduction list, as they lack potential", "correct": false },
+        { "text": "Force them to take greater responsibility to develop potential", "correct": false }
+      ],
+      "explanation": "Q7 (Expert) are valuable resources - technical experts, specialists. Should appreciate them in their role, not force managerial path."
+    }
+  ]
+}

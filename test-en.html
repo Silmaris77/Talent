@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Wiedzy - Talent Detector</title>
+    <title>Knowledge Test - Talent Detector</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         .test-header {
@@ -11,6 +11,7 @@
             padding: 20px 30px;
             text-align: center;
             border-bottom: 6px solid #FFD100;
+            position: relative;
         }
 
         .test-header h1 {
@@ -18,6 +19,36 @@
             color: #FFD100;
             margin-bottom: 5px;
             font-weight: 900;
+        }
+
+        .language-switcher {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .lang-btn {
+            background: #1a1a1a;
+            color: #FFD100;
+            border: 2px solid #FFD100;
+            padding: 8px 16px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn:hover {
+            background: #FFD100;
+            color: #1a1a1a;
+        }
+
+        .lang-btn.active {
+            background: #FFD100;
+            color: #1a1a1a;
         }
 
         .test-info {
@@ -316,98 +347,67 @@
             transform: scale(1.05);
         }
 
-        .lang-switcher {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            gap: 10px;
-            z-index: 200;
-        }
-
-        .lang-btn {
-            padding: 8px 15px;
-            background: #FFD100;
-            color: #1a1a1a;
-            text-decoration: none;
-            border: 2px solid #1a1a1a;
-            font-weight: 700;
-            font-size: 0.9rem;
-            transition: all 0.2s ease;
-        }
-
-        .lang-btn:hover {
-            background: #1a1a1a;
-            color: #FFD100;
-        }
-
-        .lang-btn.active {
-            background: #1a1a1a;
-            color: #FFD100;
-        }
-
         .hidden {
             display: none;
         }
     </style>
 </head>
 <body>
-    <div class="lang-switcher">
-        <a href="test.html" class="lang-btn active">PL</a>
-        <a href="test-en.html" class="lang-btn">EN</a>
-    </div>
-    
     <div class="container">
         <header class="test-header">
-            <h1>📚 Test Wiedzy - Talent Management</h1>
-            <p class="subtitle">Sprawdź swoją wiedzę przed kalibracją praktyczną</p>
+            <div class="language-switcher">
+                <a href="test.html" class="lang-btn">PL</a>
+                <a href="test-en.html" class="lang-btn active">EN</a>
+            </div>
+            <h1>📚 Knowledge Test - Talent Management</h1>
+            <p class="subtitle">Test your knowledge before practical calibration</p>
         </header>
 
         <!-- Start Screen -->
         <div id="startScreen" class="start-screen">
-            <h2>🎯 Witaj w teście wiedzy!</h2>
+            <h2>🎯 Welcome to the knowledge test!</h2>
             <p style="font-size: 1rem; margin-bottom: 15px;">
-                Zanim przejdziesz do praktycznej kalibracji case studies, sprawdź swoją wiedzę teoretyczną.
+                Before you proceed to the practical case study calibration, test your theoretical knowledge.
             </p>
 
             <div class="test-info">
                 <div class="test-stats">
                     <div class="stat-item">
                         <span class="stat-value">10</span>
-                        <span class="stat-label">Pytań</span>
+                        <span class="stat-label">Questions</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-value">10</span>
-                        <span class="stat-label">Minut</span>
+                        <span class="stat-label">Minutes</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-value">80%</span>
-                        <span class="stat-label">Próg zaliczenia</span>
+                        <span class="stat-label">Pass threshold</span>
                     </div>
                 </div>
             </div>
 
-            <h3 style="margin-top: 20px; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto; font-size: 1.1rem;">Test obejmuje:</h3>
+            <h3 style="margin-top: 20px; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto; font-size: 1.1rem;">Test covers:</h3>
             <ul>
-                <li>✅ <strong>Definicje podstawowe:</strong> Performance vs Potential</li>
-                <li>✅ <strong>9-Box Grid:</strong> Kategorie talentów (Q1-Q9)</li>
-                <li>✅ <strong>Interpretacja zachowań:</strong> Praktyczne sytuacje</li>
-                <li>✅ <strong>Błędy w ocenie:</strong> Bias i pułapki</li>
-                <li>✅ <strong>Działania rozwojowe:</strong> Co robić z różnymi kategoriami</li>
+                <li>✅ <strong>Basic definitions:</strong> Performance vs Potential</li>
+                <li>✅ <strong>9-Box Grid:</strong> Talent categories (Q1-Q9)</li>
+                <li>✅ <strong>Behavior interpretation:</strong> Practical situations</li>
+                <li>✅ <strong>Assessment errors:</strong> Biases and pitfalls</li>
+                <li>✅ <strong>Development actions:</strong> What to do with different categories</li>
             </ul>
 
-            <button class="btn-start" onclick="startTest()">🚀 Rozpocznij test</button>
+            <button class="btn-start" onclick="startTest()">🚀 Start test</button>
         </div>
 
         <!-- Timer -->
         <div id="timer" class="timer hidden">
-            ⏱️ Pozostały czas: <span id="timeDisplay">10:00</span>
+            ⏱️ Time remaining: <span id="timeDisplay">10:00</span>
         </div>
 
         <!-- Test Container -->
         <div id="testContainer" class="test-container hidden">
             <div class="question-progress">
-                Pytanie <span id="currentQuestion">1</span> / <span id="totalQuestions">10</span>
+                Question <span id="currentQuestion">1</span> / <span id="totalQuestions">10</span>
             </div>
 
             <div id="questionCard" class="question-card">
@@ -416,20 +416,20 @@
 
             <div class="nav-buttons">
                 <button class="btn-nav" id="prevBtn" onclick="navigateQuestion(-1)" disabled>
-                    ← Poprzednie
+                    ← Previous
                 </button>
                 <button class="btn-nav" id="nextBtn" onclick="navigateQuestion(1)">
-                    Następne →
+                    Next →
                 </button>
                 <button class="btn-nav btn-submit hidden" id="submitBtn" onclick="submitTest()">
-                    ✓ Zakończ test
+                    ✓ Submit test
                 </button>
             </div>
         </div>
 
         <!-- Results Screen -->
         <div id="resultsScreen" class="results-container hidden">
-            <h2>🎉 Test zakończony!</h2>
+            <h2>🎉 Test Results</h2>
             
             <div class="score-display" id="scoreDisplay">
                 <!-- Score will be injected here -->
@@ -442,11 +442,11 @@
             <div class="test-stats" style="max-width: 800px; margin: 30px auto;">
                 <div class="stat-item">
                     <span class="stat-value" id="correctAnswers">0</span>
-                    <span class="stat-label">Poprawne odpowiedzi</span>
+                    <span class="stat-label">Correct answers</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-value" id="timeSpent">0:00</span>
-                    <span class="stat-label">Wykorzystany czas</span>
+                    <span class="stat-label">Time used</span>
                 </div>
             </div>
 
@@ -456,18 +456,22 @@
 
             <div class="nav-buttons">
                 <button class="btn-nav" onclick="retakeTest()">
-                    🔄 Powtórz test
+                    🔄 Retake test
                 </button>
-                <button class="btn-nav" onclick="window.location.href='index.html'">
-                    ← Powrót do menu
+                <button class="btn-nav" onclick="window.location.href='index-en.html'">
+                    ← Back to menu
                 </button>
                 <button class="btn-nav btn-submit" onclick="goToCalibration()">
-                    🎯 Przejdź do kalibracji →
+                    🎯 Go to calibration →
                 </button>
             </div>
         </div>
     </div>
 
-    <script src="test-logic-simple.js"></script>
+    <script>
+        // Override the questions file path for English version
+        const QUESTIONS_FILE = 'test-questions-en.json';
+    </script>
+    <script src="test-logic-simple-en.js"></script>
 </body>
 </html>
