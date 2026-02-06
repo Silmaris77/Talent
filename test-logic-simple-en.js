@@ -10,7 +10,7 @@ let timeLeft = 10 * 60; // 10 minutes in seconds
 // Load test questions from JSON
 async function loadQuestions() {
     try {
-        const response = await fetch('test-questions-en.json');
+        const response = await fetch('test-questions-en.json?v=' + Date.now());
         const data = await response.json();
         testQuestions = data.questions;
         document.getElementById('totalQuestions').textContent = testQuestions.length;
