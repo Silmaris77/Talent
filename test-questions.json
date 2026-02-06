@@ -70,7 +70,7 @@
     {
       "id": "q6",
       "category": "Interpretacja zachowań",
-      "text": "Pracownik realizuje 100% swoich celów, but nigdy nie wychodzi z inicjatywą poza swój zakres. Gdzie go umieścisz?",
+      "text": "Pracownik zawsze realizuje 100% a czasem je przekracza, ale nigdy nie wychodzi z inicjatywą poza swój zakres.  Gdzie go umieścisz?",
       "answers": [
         { "text": "Wysokie Performance, niskie Potential (Q7 - Expert)", "correct": true },
         { "text": "Wysokie Performance, wysokie Potential (Q9 - Gwiazda)", "correct": false },
