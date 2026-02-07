@@ -3,9 +3,12 @@
 // Simple implementation of getCategory for CalibrationModule
 class SimpleTalentDetector {
     getCategory(employee) {
-        // Convert average scores to levels using thresholds
-        const perfLevel = this.scaleToLevel(employee.performance);
-        const potLevel = this.scaleToLevel(employee.potential);
+        // Convert average scores to levels using thresholds with detailed rules
+        const perfRatings = employee.performanceDetails ? Object.values(employee.performanceDetails) : [];
+        const potRatings = employee.potentialDetails ? Object.values(employee.potentialDetails) : [];
+        
+        const perfLevel = this.scaleToLevel(employee.performance, perfRatings);
+        const potLevel = this.scaleToLevel(employee.potential, potRatings);
 
         const categories = {
             '3-3': { label: 'Q9 Star', description: 'High performance + high potential - most valuable organizational talents' },
@@ -22,11 +25,39 @@ class SimpleTalentDetector {
         return categories[`${perfLevel}-${potLevel}`] || { label: 'Undefined', description: 'Insufficient data' };
     }
 
-    scaleToLevel(value) {
-        // Thresholds for categorization (scale 1-5)
-        // Low: <= 2.5, Medium: 2.5-3.5, High: > 3.5
-        if (value <= 2.5) return 1;
-        if (value <= 3.5) return 2;
+    scaleToLevel(avgValue, ratings = []) {
+        // Advanced categorization rules (scale 1-5 for avgValue, 1-4 for ratings)
+        // HIGH: Average >3.3 AND no rating "1"
+        // LOW: Average < 2.5 AND count of ratings <3 is >= 3
+        // MEDIUM: all other cases
+        
+        if (ratings.length > 0) {
+            const hasRatingOne = ratings.some(r => r === 1);
+            const lowRatingsCount = ratings.filter(r => r < 3).length;
+            
+            console.log(`🔍 Advanced categorization: avgValue=${avgValue.toFixed(2)}, ratings=[${ratings}], hasRatingOne=${hasRatingOne}, lowRatingsCount=${lowRatingsCount}`);
+            
+            // High: Average >3.3 AND no rating "1"
+            if (avgValue > 3.3 && !hasRatingOne) {
+                console.log(`✅ HIGH level (avgValue=${avgValue.toFixed(2)} > 3.3, no rating "1")`);
+                return 3;
+            }
+            
+            // Low: Average < 2.5 AND count of ratings <3 is >= 3
+            if (avgValue < 2.5 && lowRatingsCount >= 3) {
+                console.log(`⬇️ LOW level (avgValue=${avgValue.toFixed(2)} < 2.5, ${lowRatingsCount} ratings <3)`);
+                return 1;
+            }
+            
+            // Medium: everything else
+            console.log(`🔶 MEDIUM level (HIGH and LOW conditions not met)`);
+            return 2;
+        }
+        
+        // Fallback: simple logic when detailed ratings are not available
+        console.log(`⚠️ Fallback - no detailed ratings, avgValue=${avgValue.toFixed(2)}`);
+        if (avgValue <= 2.5) return 1;
+        if (avgValue <= 3.5) return 2;
         return 3;
     }
 }

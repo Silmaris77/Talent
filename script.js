@@ -3,9 +3,12 @@
 // Prosta implementacja getCategory dla CalibrationModule
 class SimpleTalentDetector {
     getCategory(employee) {
-        // Convert average scores to levels using thresholds
-        const perfLevel = this.scaleToLevel(employee.performance);
-        const potLevel = this.scaleToLevel(employee.potential);
+        // Convert average scores to levels using thresholds with detailed rules
+        const perfRatings = employee.performanceDetails ? Object.values(employee.performanceDetails) : [];
+        const potRatings = employee.potentialDetails ? Object.values(employee.potentialDetails) : [];
+        
+        const perfLevel = this.scaleToLevel(employee.performance, perfRatings);
+        const potLevel = this.scaleToLevel(employee.potential, potRatings);
 
         const categories = {
             '3-3': { label: 'Q9 Gwiazda', description: 'Wysokie wyniki + wysoki potencjał - najcenniejsze talenty organizacji' },
@@ -22,11 +25,39 @@ class SimpleTalentDetector {
         return categories[`${perfLevel}-${potLevel}`] || { label: 'Nieokreślony', description: 'Brak wystarczających danych' };
     }
 
-    scaleToLevel(value) {
-        // Progi dla kategoryzacji (skala 1-5)
-        // Niski: <= 2.5, Średni: 2.5-3.5, Wysoki: > 3.5
-        if (value <= 2.5) return 1;
-        if (value <= 3.5) return 2;
+    scaleToLevel(avgValue, ratings = []) {
+        // Zaawansowane reguły kategoryzacji (skala 1-5 dla avgValue, 1-4 dla ratings)
+        // WYSOKI: Średnia >3,3 ORAZ brak oceny "1"
+        // NISKI: Średnia < 2.5 ORAZ liczba ocen mniejszych niż 3 jest większa lub równa 3
+        // ŚREDNI: pozostałe przypadki
+        
+        if (ratings.length > 0) {
+            const hasRatingOne = ratings.some(r => r === 1);
+            const lowRatingsCount = ratings.filter(r => r < 3).length;
+            
+            console.log(`🔍 Zaawansowana kategoryzacja: avgValue=${avgValue.toFixed(2)}, ratings=[${ratings}], hasRatingOne=${hasRatingOne}, lowRatingsCount=${lowRatingsCount}`);
+            
+            // Wysoki: Średnia >3.3 ORAZ brak oceny "1"
+            if (avgValue > 3.3 && !hasRatingOne) {
+                console.log(`✅ WYSOKI poziom (avgValue=${avgValue.toFixed(2)} > 3.3, brak oceny "1")`);
+                return 3;
+            }
+            
+            // Niski: Średnia < 2.5 ORAZ liczba ocen <3 jest >= 3
+            if (avgValue < 2.5 && lowRatingsCount >= 3) {
+                console.log(`⬇️ NISKI poziom (avgValue=${avgValue.toFixed(2)} < 2.5, ${lowRatingsCount} ocen <3)`);
+                return 1;
+            }
+            
+            // Średni: wszystko inne
+            console.log(`🔶 ŚREDNI poziom (warunki WYSOKI i NISKI nie spełnione)`);
+            return 2;
+        }
+        
+        // Fallback: prosta logika gdy brak szczegółowych ocen
+        console.log(`⚠️ Fallback - brak szczegółowych ocen, avgValue=${avgValue.toFixed(2)}`);
+        if (avgValue <= 2.5) return 1;
+        if (avgValue <= 3.5) return 2;
         return 3;
     }
 }
