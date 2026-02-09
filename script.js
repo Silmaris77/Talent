@@ -7,8 +7,8 @@ class SimpleTalentDetector {
         const perfRatings = employee.performanceDetails ? Object.values(employee.performanceDetails) : [];
         const potRatings = employee.potentialDetails ? Object.values(employee.potentialDetails) : [];
         
-        const perfLevel = this.scaleToLevel(employee.performance, perfRatings);
-        const potLevel = this.scaleToLevel(employee.potential, potRatings);
+        const perfLevel = this.scaleToLevel(employee.performance, perfRatings, 'performance');
+        const potLevel = this.scaleToLevel(employee.potential, potRatings, 'potential');
 
         const categories = {
             '3-3': { label: 'Q9 Gwiazda', description: 'Wysokie wyniki + wysoki potencjał - najcenniejsze talenty organizacji' },
@@ -25,40 +25,66 @@ class SimpleTalentDetector {
         return categories[`${perfLevel}-${potLevel}`] || { label: 'Nieokreślony', description: 'Brak wystarczających danych' };
     }
 
-    scaleToLevel(avgValue, ratings = []) {
-        // Zaawansowane reguły kategoryzacji (skala 1-5 dla avgValue, 1-4 dla ratings)
-        // WYSOKI: Średnia >3,3 ORAZ brak oceny "1"
-        // NISKI: Średnia < 2.5 ORAZ liczba ocen mniejszych niż 3 jest większa lub równa 3
+    scaleToLevel(avgValue, ratings = [], dimension = 'performance') {
+        // Zaawansowane reguły kategoryzacji (skala 1-4 bezpośrednio)
+        // PERFORMANCE - WYSOKI: Średnia >3.3 ORAZ brak oceny "1"
+        // POTENCJAŁ - WYSOKI: Średnia >=3.5 ORAZ brak oceny "1"
+        // PERFORMANCE - NISKI: Średnia <2.5 ORAZ >=3 oceny <3
+        // POTENCJAŁ - NISKI: Średnia <=2.5
         // ŚREDNI: pozostałe przypadki
         
         if (ratings.length > 0) {
             const hasRatingOne = ratings.some(r => r === 1);
             const lowRatingsCount = ratings.filter(r => r < 3).length;
             
-            console.log(`🔍 Zaawansowana kategoryzacja: avgValue=${avgValue.toFixed(2)}, ratings=[${ratings}], hasRatingOne=${hasRatingOne}, lowRatingsCount=${lowRatingsCount}`);
+            console.log(`🔍 Zaawansowana kategoryzacja [${dimension}]: avgValue=${avgValue.toFixed(2)}, ratings=[${ratings}], hasRatingOne=${hasRatingOne}, lowRatingsCount=${lowRatingsCount}`);
             
-            // Wysoki: Średnia >3.3 ORAZ brak oceny "1"
-            if (avgValue > 3.3 && !hasRatingOne) {
-                console.log(`✅ WYSOKI poziom (avgValue=${avgValue.toFixed(2)} > 3.3, brak oceny "1")`);
-                return 3;
+            if (dimension === 'potential') {
+                // POTENCJAŁ - Wysoki: Średnia >=3.5 ORAZ brak oceny "1"
+                if (avgValue >= 3.5 && !hasRatingOne) {
+                    console.log(`✅ WYSOKI potencjał (avgValue=${avgValue.toFixed(2)} >= 3.5, brak oceny "1")`);
+                    return 3;
+                }
+                
+                // POTENCJAŁ - Niski: Średnia <=2.5
+                if (avgValue <= 2.5) {
+                    console.log(`⬇️ NISKI potencjał (avgValue=${avgValue.toFixed(2)} <= 2.5)`);
+                    return 1;
+                }
+                
+                // POTENCJAŁ - Średni: wszystko inne
+                console.log(`🔶 ŚREDNI potencjał (warunki WYSOKI i NISKI nie spełnione)`);
+                return 2;
+            } else {
+                // PERFORMANCE - Wysoki: Średnia >3.3 ORAZ brak oceny "1"
+                if (avgValue > 3.3 && !hasRatingOne) {
+                    console.log(`✅ WYSOKI performance (avgValue=${avgValue.toFixed(2)} > 3.3, brak oceny "1")`);
+                    return 3;
+                }
+                
+                // PERFORMANCE - Niski: Średnia <2.5 ORAZ liczba ocen <3 jest >=3
+                if (avgValue < 2.5 && lowRatingsCount >= 3) {
+                    console.log(`⬇️ NISKI performance (avgValue=${avgValue.toFixed(2)} < 2.5, ${lowRatingsCount} ocen <3)`);
+                    return 1;
+                }
+                
+                // PERFORMANCE - Średni: wszystko inne
+                console.log(`🔶 ŚREDNI performance (warunki WYSOKI i NISKI nie spełnione)`);
+                return 2;
             }
-            
-            // Niski: Średnia < 2.5 ORAZ liczba ocen <3 jest >= 3
-            if (avgValue < 2.5 && lowRatingsCount >= 3) {
-                console.log(`⬇️ NISKI poziom (avgValue=${avgValue.toFixed(2)} < 2.5, ${lowRatingsCount} ocen <3)`);
-                return 1;
-            }
-            
-            // Średni: wszystko inne
-            console.log(`🔶 ŚREDNI poziom (warunki WYSOKI i NISKI nie spełnione)`);
-            return 2;
         }
         
         // Fallback: prosta logika gdy brak szczegółowych ocen
-        console.log(`⚠️ Fallback - brak szczegółowych ocen, avgValue=${avgValue.toFixed(2)}`);
-        if (avgValue <= 2.5) return 1;
-        if (avgValue <= 3.5) return 2;
-        return 3;
+        console.log(`⚠️ Fallback [${dimension}] - brak szczegółowych ocen, avgValue=${avgValue.toFixed(2)}`);
+        if (dimension === 'potential') {
+            if (avgValue <= 2.5) return 1;
+            if (avgValue < 3.5) return 2;
+            return 3;
+        } else {
+            if (avgValue < 2.5) return 1;
+            if (avgValue <= 3.3) return 2;
+            return 3;
+        }
     }
 }
 
@@ -335,26 +361,20 @@ class CalibrationModule {
         const benchmark = this.benchmarkScores[`case${caseId}`];
         const assessmentDiv = document.getElementById(`assessment-case${caseId}`);
         
-        // Calculate categories
+        // Calculate averages directly in 1-4 scale
         const userPerfAvg = this.calculateAverage(userScores, 'perf');
         const userPotAvg = this.calculateAverage(userScores, 'pot');
         const benchPerfAvg = this.calculateAverage(benchmark, 'perf');
         const benchPotAvg = this.calculateAverage(benchmark, 'pot');
         
-        // Scale to 1-5 for category calculation (like in main app)
-        const userPerfScaled = this.scaleToFive(userPerfAvg);
-        const userPotScaled = this.scaleToFive(userPotAvg);
-        const benchPerfScaled = this.scaleToFive(benchPerfAvg);
-        const benchPotScaled = this.scaleToFive(benchPotAvg);
-        
-        console.log('User scores:', { perf: userPerfScaled, pot: userPotScaled });
-        console.log('Bench scores:', { perf: benchPerfScaled, pot: benchPotScaled });
+        console.log('User scores:', { perf: userPerfAvg, pot: userPotAvg });
+        console.log('Bench scores:', { perf: benchPerfAvg, pot: benchPotAvg });
         console.log('TalentDetector available:', !!this.talentDetector);
         
         // Create employee objects for categorization (needed for count method)
         const userEmployee = {
-            performance: userPerfScaled,
-            potential: userPotScaled,
+            performance: userPerfAvg,
+            potential: userPotAvg,
             performanceDetails: {
                 q1_dostarczanie_wynikow: userScores.perf_q1,
                 q2_jakosc_pracy: userScores.perf_q2,
@@ -374,8 +394,8 @@ class CalibrationModule {
         };
         
         const benchEmployee = {
-            performance: benchPerfScaled,
-            potential: benchPotScaled,
+            performance: benchPerfAvg,
+            potential: benchPotAvg,
             performanceDetails: {
                 q1_dostarczanie_wynikow: benchmark.perf_q1,
                 q2_jakosc_pracy: benchmark.perf_q2,
@@ -635,10 +655,7 @@ class CalibrationModule {
         return relevantScores.reduce((a, b) => a + b, 0) / relevantScores.length;
     }
 
-    scaleToFive(score) {
-        // Scale from 1-4 to 1-5 range (same as main application)
-        return 1 + ((score - 1) * 4 / 3);
-    }
+
 
     generateFeedback(caseId, userScores, benchmark) {
         const perfDiff = this.calculateAverage(userScores, 'perf') - this.calculateAverage(benchmark, 'perf');
