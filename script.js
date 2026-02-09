@@ -665,41 +665,45 @@ class CalibrationModule {
             'case1': {
                 name: 'Joanny',
                 tips: [
-                    'Joanna ma wysoką ambicję i motywację (Q8), ale strategia i głębia wiedzy wymagają rozwoju (Q9, Q11)',
-                    'Świetnie radzi sobie z presją i adaptacją (Q4, Q7), ale brakuje konsekwencji w decyzjach (Q3)',
-                    'Potencjał przywódczy jest widoczny (Q10), choć nie przetestowany jeszcze w praktyce'
+                    'Joanna to "Kluczowy pracownik" (Q5) - średnie performance i średni potencjał, solidny rdzeń organizacji',
+                    'Wyniki są dobre (108% celu), ale brakuje konsekwencji (pyt. 3) i głębi w decyzjach (pyt. 11)',
+                    'Wysoka ambicja i energia (pyt. 8, pyt. 12), ale potencjał ograniczony brakiem myślenia strategicznego (pyt. 9) i głębi wiedzy (pyt. 11)'
                 ]
             },
             'case2': {
                 name: 'Roberta',
                 tips: [
-                    'Robert to przypadek "Enigma" (Q3) - wysoki potencjał (Q7, Q9, Q11) vs niska performance obecnie',
-                    'Kluczowy problem: źle dopasowana rola. Wcześniej był świetny, teraz zdemotywowany (Q8, Q12)',
-                    'Symptomy frustracji: wycofanie z zespołu (Q5), minimalna komunikacja (Q6), niespójna jakość (Q2)'
+                    'Robert to "Niekonsekwentny" (Q2) - niskie performance (1.83) przy średnim potencjale (3.17)',
+                    'Kluczowy problem: źle dopasowana rola. Wcześniej był świetny (120%+ celów), teraz tylko 65-75%',
+                    'Symptomy frustracji: wycofanie z zespołu (pyt. 5), reaktywna komunikacja (pyt. 6), brak niezawodności (pyt. 3)',
+                    '⚠️ Znaczna różnica między potencjałem (zdolności strategiczne pyt. 9, szeroka perspektywa pyt. 11) a obecnymi wynikami - wymaga wsparcia i struktury'
                 ]
             },
             'case3': {
                 name: 'Moniki',
                 tips: [
-                    'Monika to "Ekspert" (Q7) - doskonała performance (Q1-Q6), ale niski potencjał do większych ról',
-                    'Świetna w swojej domenie technicznej, ale brak ambicji rozwojowych (Q8) i unikanie przywództwa (Q10)',
-                    'Opór przed nowymi obszarami (Q7, Q11) i brakiem inicjatyw strategicznych (Q9, Q12)'
+                    'Monika to "Ekspert" (Q7) - wysokie performance (3.83), niski potencjał (1.50)',
+                    'Doskonała w swojej domenie: 110-115% celów, wyjątkowa jakość (pyt. 1, pyt. 2), absolutna niezawodność (pyt. 3)',
+                    'Bardzo niski potencjał rozwojowy: brak zainteresowania awansem (pyt. 8=1), unika przywództwa (pyt. 10=1), opór przed zmianami (pyt. 9=1)',
+                    '✅ Cenny ekspert techniczny - utrzymać w roli specjalisty, nie forsować ścieżki menedżerskiej'
                 ]
             },
             'case4': {
                 name: 'Tomasza',
                 tips: [
-                    'Tomasz to "Niezawodny" (Q8) - doskonała performance przez 5 lat (Q1-Q3), średni potencjał',
-                    'Kluczowe pytanie: widoczna ambicja (Q8) i potencjał przywódczy (Q10), ale brak potwierdzenia w praktyce',
-                    'Ograniczenie: 5 lat w tej samej roli (Q11) - nie testował się jeszcze w odpowiedzialności za większe decyzje (Q10, Q12)'
+                    'Tomasz to "High Performer" (Q8) - wysokie performance (3.83), średni potencjał (2.83)',
+                    'Konsekwentnie przekracza oczekiwania: 105-110% celów, wysoka jakość, bardzo niezawodny przez 5 lat (pyt. 1-3)',
+                    'Średni potencjał: widoczna ambicja (pyt. 8=3) i inicjatywa (pyt. 12=3), ale brak formalnego doświadczenia przywódczego (pyt. 10=2)',
+                    '✅ Solidny kandydat do rozwoju w bardziej złożone role analityczne, ale przywództwo wymaga weryfikacji w praktyce'
                 ]
             },
             'case5': {
                 name: 'Katarzyny',
                 tips: [
-                    'Katarzyna to "Pracownik Zadaniowy" (Q4) - solidna performance (Q2-Q3), ale bardzo niski potencjał rozwojowy',
-                    'Kluczowy wzór: wysoka niezawodność i jakość vs brak ambicji (Q8), opór przed zmianami (Q9), unikanie większej odpowiedzialności (Q10)',
-                    'Wyzwanie: informacje ukryte w narracji - musisz sam/a zidentyfikować przykłady dla każdego pytania (np. reaktywność w problemie z raportowaniem → Q12)'
+                    'Katarzyna to "Rzetelny wykonawca" (Q4) - średnie performance (2.83), niski potencjał (1.50)',
+                    'Stabilna performance: 95-100% celów, dobra jakość, niezawodna w ramach procedur (pyt. 1-3)',
+                    'Bardzo niski potencjał: zadowolona z obecnej roli (pyt. 8=1), opór przed zmianami (pyt. 9=1), unika decyzji biznesowych (pyt. 10=1)',
+                    '⚠️ Kluczowe sygnały: reaktywność zamiast proaktywności, przerzucanie problemów zamiast rozwiązywania (pyt. 12=2)'
                 ]
             }
         };

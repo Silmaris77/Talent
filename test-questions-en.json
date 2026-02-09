@@ -70,7 +70,7 @@
     {
       "id": "q6",
       "category": "Behavior Interpretation",
-      "text": "An employee achieves 100% of their goals but never takes initiative beyond their scope. Where would you place them?",
+      "text": "An employee achieves, and often exceeds, their goals, but never takes initiative beyond their scope. Where would you place them?",
       "answers": [
         { "text": "High Performance, low Potential (Q7 - Expert)", "correct": true },
         { "text": "High Performance, high Potential (Q9 - Star)", "correct": false },

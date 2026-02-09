@@ -665,41 +665,45 @@ class CalibrationModule {
             'case1': {
                 name: 'Joanna',
                 tips: [
-                    'Joanna has high ambition and motivation (Q8), but strategy and depth of knowledge require development (Q9, Q11)',
-                    'Handles pressure and adaptation brilliantly (Q4, Q7), but lacks consistency in decisions (Q3)',
-                    'Leadership potential is visible (Q10), though not yet tested in practice'
+                    'Joanna is a "Key employee" (Q5) - medium performance and medium potential, solid organizational core',
+                    'Results are good (108% of target), but lacks consistency (#3) and depth in decisions (#11)',
+                    'High ambition and energy (#8, #12), but potential limited by lack of strategic thinking (#9) and depth of knowledge (#11)'
                 ]
             },
             'case2': {
                 name: 'Robert',
                 tips: [
-                    'Robert is an "Enigma" case (Q3) - high potential (Q7, Q9, Q11) vs low performance currently',
-                    'Key problem: poorly matched role. Was excellent before, now demotivated (Q8, Q12)',
-                    'Symptoms of frustration: withdrawal from team (Q5), minimal communication (Q6), inconsistent quality (Q2)'
+                    'Robert is "Inconsistent" (Q2) - low performance (1.83) with medium potential (3.17)',
+                    'Key problem: poorly matched role. Was excellent before (120%+ targets), now only 65-75%',
+                    'Symptoms of frustration: withdrawal from team (#5), minimal communication (#6), lack of reliability (#3)',
+                    '⚠️ Significant gap between potential (strategic abilities #9, broad perspective #11) and current results - requires support and structure'
                 ]
             },
             'case3': {
                 name: 'Monika',
                 tips: [
-                    'Monika is an "Expert" (Q7) - excellent performance (Q1-Q6), but low potential for bigger roles',
-                    'Great in her technical domain, but lacks development ambition (Q8) and avoids leadership (Q10)',
-                    'Resistance to new areas (Q7, Q11) and lack of strategic initiatives (Q9, Q12)'
+                    'Monika is an "Expert" (Q7) - high performance (3.83), low potential (1.50)',
+                    'Excellent in her domain: 110-115% targets, exceptional quality (#1, #2), absolute reliability (#3)',
+                    'Very low development potential: no interest in promotion (#8=1), avoids leadership (#10=1), resistance to change (#9=1)',
+                    '✅ Valuable technical expert - keep in specialist role, don\'t force managerial path'
                 ]
             },
             'case4': {
                 name: 'Tomasz',
                 tips: [
-                    'Tomasz is "Reliable" (Q8) - excellent performance for 5 years (Q1-Q3), medium potential',
-                    'Key question: visible ambition (Q8) and leadership potential (Q10), but no confirmation in practice',
-                    'Limitation: 5 years in same role (Q11) - has not tested himself in responsibility for bigger decisions (Q10, Q12)'
+                    'Tomasz is a "High Performer" (Q8) - high performance (3.83), medium potential (2.83)',
+                    'Consistently exceeds expectations: 105-110% targets, high quality, very reliable for 5 years (#1-#3)',
+                    'Medium potential: visible ambition (#8=3) and initiative (#12=3), but lacks formal leadership experience (#10=2)',
+                    '✅ Solid candidate for development into more complex analytical roles, but leadership requires practical verification'
                 ]
             },
             'case5': {
                 name: 'Katarzyna',
                 tips: [
-                    'Katarzyna is "Task Worker" (Q4) - solid performance (Q2-Q3), but very low development potential',
-                    'Key pattern: high reliability and quality vs lack of ambition (Q8), resistance to changes (Q9), avoiding greater responsibility (Q10)',
-                    'Challenge: information hidden in narrative - you must identify examples for each question yourself (e.g., reactivity in reporting problem → Q12)'
+                    'Katarzyna is a "Reliable performer" (Q4) - medium performance (2.83), low potential (1.50)',
+                    'Stable performance: 95-100% targets, good quality, reliable within procedures (#1-#3)',
+                    'Very low potential: satisfied with current role (#8=1), resistance to changes (#9=1), avoids business decisions (#10=1)',
+                    '⚠️ Key signals: reactivity instead of proactivity, passing problems upward instead of solving them (#12=2)'
                 ]
             }
         };
