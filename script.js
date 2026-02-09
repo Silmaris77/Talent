@@ -425,12 +425,12 @@ class CalibrationModule {
                 
                 <div class="category-comparison">
                     <div class="category-box user-category">
-                        <h5>Twoja kategoria w 9-Box:</h5>
+                        <h5>Twoja kategoria:</h5>
                         <div class="category-badge">${userCategory.label}</div>
                         <p class="category-desc">${userCategory.description}</p>
                     </div>
                     <div class="category-box benchmark-category">
-                        <h5>Kategoria ekspercka:</h5>
+                        <h5>Benchmark ekspercki:</h5>
                         <div class="category-badge">${benchCategory.label}</div>
                         <p class="category-desc">${benchCategory.description}</p>
                     </div>
